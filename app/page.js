@@ -1,3 +1,5 @@
+"use client";
+
 import SimpleSlider from "@/components/SimpleSlider";
 import TestimonialSlider from "@/components/TestimonialSlider";
 import { Button, Container, Grid, Stack, Toolbar, Typography } from "@mui/material";
@@ -7,62 +9,62 @@ const productCategories = [
   {
     label: "Capsules",
     img: "/categories/capsules.jpg",
-    link: "/product/capsules"
+    link: "/products/category/capsules/37"
   },
   {
     label: "Protein",
     img: "/categories/protein.jpg",
-    link: "/product/protein"
+    link: "/products/category/protein/40"
   },
   {
     label: "Ointments",
     img: "/categories/ointments.jpg",
-    link: "/product/ointments"
+    link: "/products/category/ointments/39"
   },
   {
     label: "Herbal",
     img: "/categories/herbal.jpg",
-    link: "/product/herbal"
+    link: "/products/category/herbal/48"
   },
   {
     label: "Syrup",
     img: "/categories/syrup.jpg",
-    link: "/product/syrup"
+    link: "/products/category/syrup/36"
   },
   {
     label: "Energy Drink",
     img: "/categories/energy-drinks.jpg",
-    link: "/product/energy-drinks"
+    link: "/products/category/energy-drinks/49"
   },
   {
     label: "Injectables",
     img: "/categories/injectables.jpg",
-    link: "/product/injectables"
+    link: "/products/category/injectables/61"
   },
   {
     label: "Lotions",
     img: "/categories/lotions.jpg",
-    link: "/product/lotions"
+    link: "/products/category/lotions/44"
   },
   {
     label: "Sachets",
     img: "/categories/sachets.jpg",
-    link: "/product/sachets"
+    link: "/products/category/sachets/41"
   },
   {
     label: "Gynaec Range",
     img: "/categories/gynaec.jpg",
-    link: "/product/gynaec"
+    link: "/products/category/gynaec/52"
   },
   {
     label: "Tablets",
     img: "/categories/tablets.jpg",
-    link: "/product/tablets"
+    link: "/products/category/tablets/38"
   },
   {
     label: "Soap",
     img: "/categories/soap.jpg",
-    link: "/product/soap"
+    link: "/products/category/soap/43"
   }
 ];
 
@@ -133,10 +135,10 @@ export default function Home() {
 
         {/* About Us Section */}
         <Grid container alignItems={"center"} spacing={4} py={5}>
-          <Grid size={{ xs: 12, sm: 12, md:6 }}>
+          <Grid size={{ xs: 12, sm: 12, md: 6 }}>
             <img src="/about-section.png" style={{ width: '100%' }} />
           </Grid>
-          <Grid size={{ xs: 12, sm: 12, md:6 }}>
+          <Grid size={{ xs: 12, sm: 12, md: 6 }}>
             <Stack spacing={2}>
               <Typography variant="h3">
                 Best Pharma Franchise Company in India
@@ -149,8 +151,8 @@ export default function Home() {
               </Typography>
               <Link href="/about">
                 <Typography variant="subtitle2">
-                Learn more...
-              </Typography>
+                  Learn more...
+                </Typography>
               </Link>
             </Stack>
           </Grid>
@@ -169,17 +171,17 @@ export default function Home() {
             {
               title: "About Us",
               text: "Biozoc Inc. is a PCD division of Zoic Group in India. Here, we believe that good health should be accessible to everyone and we strive to make this possible through our commitment to science driven healthcare.",
-              link: ""
+              link: "/about"
             },
             {
               title: "PCD Pharma Franchise",
               text: "Biozoc Inc. is an ISO 9001:2015 Certified Pharma Franchise Company in Chandigarh offering more than 250+ high quality Medical Products.",
-              link: ""
+              link: "/pcd-franchise"
             },
             {
               title: "3rd Party Manufacturing",
               text: "We have 250+ product approvals of which many are latest molecules launched in industry. We cater to all segments like Gynaecology, Dermatology.",
-              link: ""
+              link: "/third-party-manufacturing"
             },
           ].map((item, index) => (
             <Grid key={index} size={{ xs: 12, sm: 6, md: 4 }} display="flex">
@@ -208,6 +210,8 @@ export default function Home() {
 
                 <Button
                   variant="outlined"
+                  component={Link}
+                  href={item.link}
                   sx={{
                     borderColor: "#EC1C24",
                     color: "#EC1C24",
@@ -234,7 +238,7 @@ export default function Home() {
             {
               whyChoose.map((item, i) => (
                 <Grid key={i} size={{ xs: 6, sm: 4 }} display="flex">
-                  <Stack spacing={2} alignItems={"center"} justifyContent={"center"} sx={{flexGrow: 1,}}>
+                  <Stack spacing={2} alignItems={"center"} justifyContent={"center"} sx={{ flexGrow: 1, }}>
                     <img src={item.img} className="why-choose-us-image" />
                     <Typography variant="body2">
                       {item.label}
@@ -247,10 +251,10 @@ export default function Home() {
         </Stack>
       </Container>
 
-      <Toolbar/>
+      <Toolbar />
 
       {/* Testimonial Slider */}
-      <TestimonialSlider/>
+      <TestimonialSlider />
     </>
   );
 }
