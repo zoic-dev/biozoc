@@ -201,7 +201,7 @@ const Footer = () => {
                         </Typography>
                         <Stack spacing={2} mb={2}>
                             <Stack direction={"row"} spacing={1}>
-                                <Email fontSize="small"/>
+                                <Email fontSize="small" />
 
                                 <MUILink
                                     component={Link}
@@ -219,7 +219,7 @@ const Footer = () => {
                             </Stack>
 
                             <Stack direction={"row"} spacing={1}>
-                                <Phone fontSize="small"/>
+                                <Phone fontSize="small" />
                                 <MUILink
                                     component={Link}
                                     href={"tel:9815620908"}
@@ -236,7 +236,7 @@ const Footer = () => {
                             </Stack>
 
                             <Stack direction={"row"} spacing={1}>
-                                <Phone fontSize="small"/>
+                                <Phone fontSize="small" />
                                 <MUILink
                                     component={Link}
                                     href={"tel:9876800625"}
@@ -253,9 +253,9 @@ const Footer = () => {
                             </Stack>
                         </Stack>
 
-                        <Stack direction="row" spacing={1} justifyContent="start">
+                        <Stack direction="row" spacing={1} justifyContent="start" mt={3}>
                             <IconButton
-                                href="https://www.facebook.com/netcrafty"
+                                href="https://www.facebook.com/biozoc/"
                                 target="_blank"
                                 sx={{
                                     color: "#fff",
@@ -266,7 +266,7 @@ const Footer = () => {
                                 <Facebook />
                             </IconButton>
                             <IconButton
-                                href="https://twitter.com/Netcrafty_com"
+                                href="https://twitter.com/biozoc"
                                 target="_blank"
                                 sx={{
                                     color: "#fff",
@@ -277,7 +277,7 @@ const Footer = () => {
                                 <X />
                             </IconButton>
                             <IconButton
-                                href="https://www.instagram.com/netcrafty"
+                                href="https://www.youtube.com/channel/UCE2PX3YCrJzwWMxkNnkdXxw"
                                 target="_blank"
                                 sx={{
                                     color: "#fff",
@@ -288,7 +288,7 @@ const Footer = () => {
                                 <YouTube />
                             </IconButton>
                             <IconButton
-                                href="https://in.linkedin.com/company/netcrafty"
+                                href="https://www.linkedin.com/in/biozoc-pharma-53b4a6193/"
                                 target="_blank"
                                 sx={{
                                     color: "#fff",

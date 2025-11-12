@@ -1,0 +1,29 @@
+/* ========== Testimonial Slider Scoped Styles ========== */
+
+.testimonial-slider .slick-prev:before,
+.testimonial-slider .slick-next:before {
+  color: white !important;
+  font-size: 28px !important;
+}
+
+.testimonial-slider .slick-dots li button:before {
+  color: white !important;
+  font-size: 10px !important;
+}
+
+.testimonial-slider .slick-dots li.slick-active button:before {
+  color: red !important;
+}
+
+/* Ensure slides in testimonial section are vertically centered */
+.testimonial-slider .slick-slide {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center;
+}
+
+.testimonial-slider .slick-track {
+  display: flex !important;
+  align-items: center !important;
+}

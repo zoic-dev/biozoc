@@ -1,7 +1,19 @@
+:root {
+  --primary-font-family: "Montserrat", sans-serif;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body{
   margin: 0px !important;
-  max-width: 100vw;
-  overflow-x: hidden;
+  font-family: var(--primary-font-family) !important;
+}
+
+.MuiTypography-root {
+  font-family: var(--primary-font-family) !important;
 }
 
 a {
@@ -11,7 +23,7 @@ a {
 
 .navbar-links {
   color: black;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 500;
   transition: .3s;
 }
@@ -52,4 +64,43 @@ a {
 
 .dropdown1:hover .dropdown-content {
   display: block;
+}
+
+.product-category-image{
+  width: 100%;
+  border-radius: 50%;
+}
+
+.product-category-text{
+  text-align: center;
+}
+
+.why-choose-us-image {
+  width: 33%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.3s ease;
+}
+
+/* Tablet (medium screens) */
+@media (max-width: 992px) {
+  .why-choose-us-image {
+    width: 45%;
+  }
+}
+
+/* Mobile (small screens) */
+@media (max-width: 600px) {
+  .why-choose-us-image {
+    width: 65%;
+  }
+}
+
+/* Mobile (small screens) */
+@media (max-width: 400px) {
+  .why-choose-us-image {
+    width: 100%;
+  }
 }

@@ -33,12 +33,13 @@ const NavbarContainer = styled(AppBar)`
   position: sticky;
 `;
 
-const NavLink = styled("a")(({ active }) => ({
+const NavLink = styled("span")(({ active }) => ({
     color: active ? "#EC1C24" : "#000",
     fontSize: "16px",
     fontWeight: 500,
     transition: "color 0.3s ease",
     textDecoration: "none",
+    cursor: "pointer",
     "&:hover": {
         color: "#EC1C24",
     },
@@ -53,7 +54,7 @@ const DropdownMenu = styled("div")`
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
   z-index: 9999;
-  min-width: 200px;
+  min-width: 180px;
   padding: 8px 0;
   opacity: ${({ open }) => (open ? 1 : 0)};
   visibility: ${({ open }) => (open ? "visible" : "hidden")};
@@ -92,18 +93,18 @@ export default function Navbar() {
         { label: "Home", href: "/" },
         { label: "About", href: "/about" },
         {
-            label: "Products",
+            label: "Products", href: "/products",
             dropdown: [
-                { label: "Tablets", href: "/product/tablets" },
-                { label: "Capsules", href: "/product/capsules" },
-                { label: "Syrups", href: "/product/syrups" },
-                { label: "Injections", href: "/product/injections" },
-                { label: "Ointments", href: "/product/ointments" },
-                { label: "Sachets", href: "/product/sachets" },
-                { label: "Protein Powder", href: "/product/protein-powder" },
-                { label: "Herbal Range", href: "/product/herbal-range" },
-                { label: "Cosmetic Range", href: "/product/cosmetic-range" },
-                { label: "Ayurvedic Juices", href: "/product/ayurvedic-juices" },
+                { label: "Tablets", href: "/products/category/tablets/38" },
+                { label: "Capsules", href: "/products/category/capsules/37" },
+                { label: "Syrups", href: "/products/category/syrups/36" },
+                { label: "Injections", href: "/products/category/injections/15" },
+                { label: "Ointments", href: "/products/category/ointments/39" },
+                { label: "Sachets", href: "/products/category/sachets/41" },
+                { label: "Protein", href: "/products/category/protein/40" },
+                { label: "Herbal Range", href: "/products/category/herbal/48" },
+                { label: "Gynaec Range", href: "/products/category/gynae/52" },
+                { label: "Energy Drinks", href: "/products/category/energy-drinks/49" },
             ],
         },
         { label: "Third Party Manufacturing", href: "/third-party-manufacturing" },
@@ -172,8 +173,9 @@ export default function Navbar() {
                                         sx={{ position: "relative" }}
                                     >
                                         <NavLink
-                                            as="span"
-                                            style={{ cursor: "pointer", display: "inline-flex", alignItems: "center" }}
+                                            as={Link}
+                                            href={link.href}
+                                            style={{ cursor: "pointer", display: "inline-flex", alignItems: "center", fontSize: '16px' }}
                                         >
                                             Products{" "}
                                             <CaretDown
@@ -196,7 +198,7 @@ export default function Navbar() {
                                     </Box>
                                 ) : (
                                     <Link key={i} href={link.href} passHref>
-                                        <NavLink active={pathname === link.href ? 1 : 0}>
+                                        <NavLink active={pathname === link.href ? 1 : 0} sx={{ fontSize: '16px' }}>
                                             {link.label}
                                         </NavLink>
                                     </Link>
@@ -207,6 +209,7 @@ export default function Navbar() {
                                 sx={{
                                     borderColor: "#EC1C24",
                                     color: "#EC1C24",
+                                    fontFamily: '"Montserrat", sans-serif',
                                     fontWeight: 600,
                                     "&:hover": { backgroundColor: "#EC1C24", color: "#fff" },
                                 }}

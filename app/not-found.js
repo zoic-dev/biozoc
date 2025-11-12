@@ -1,7 +1,7 @@
-export default function NotFound(){
-    return(
+export default function NotFound() {
+    return (
         <>
-        Custom 404
+            Custom 404
         </>
     )
 }
