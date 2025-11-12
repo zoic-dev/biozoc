@@ -74,7 +74,7 @@ const additionalLinks = [
     },
     {
         label: 'PCD Pharma',
-        href: '/pcd-pharma'
+        href: '/pcd-franchise'
     },
     {
         label: 'Third Party Manufacturing',
