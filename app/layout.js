@@ -18,9 +18,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Biozoc",
-  description: "Leading PCD Pharma & Third Party Manufacturing Company",
+  title: "Biozoc Inc. | Leading Pharma & Nutraceutical Manufacturer in India",
+  description:
+    "Biozoc Inc. is a trusted PCD pharma company and third-party manufacturer offering premium pharmaceutical and nutraceutical products with WHO-GMP certified facilities, custom formulations, private labeling, and nationwide PCD franchise opportunities.",
+  keywords:
+    "Biozoc Inc, pharma manufacturer India, nutraceutical manufacturer India, third party pharma manufacturing, contract manufacturing pharma, PCD pharma company, PCD franchise India, private label nutraceuticals, pharma OEM services, custom formulation pharma, WHO GMP certified manufacturer",
 };
+
 
 export default function RootLayout({ children }) {
   return (

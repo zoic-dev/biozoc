@@ -95,99 +95,9 @@ const Footer = () => {
         >
             <Container>
                 <Grid container spacing={4}>
-                    {/* Services */}
-                    <Grid size={{ xs: 12, sm: 6, md: 3 }}>
-                        <Typography
-                            variant="h6"
-                            sx={{
-                                letterSpacing: 1,
-                                fontWeight: 500,
-                                mb: 2,
-                                color: "#EC1B24",
-                            }}
-                        >
-                            Product Categories
-                        </Typography>
-                        <Stack spacing={2}>
-                            {productLinks1.map(
-                                (item, i) => (
-                                    <MUILink
-                                        key={i}
-                                        component={Link}
-                                        href={item.href}
-                                        underline="none"
-                                        sx={{
-                                            color: "#acacac",
-                                            fontSize: 16,
-                                            transition: "0.3s",
-                                            "&:hover": { color: "#EC1B24" },
-                                        }}
-                                    >
-                                        {item.label}
-                                    </MUILink>
-                                )
-                            )}
-                        </Stack>
-                    </Grid>
-
-                    {/* Solutions */}
-                    <Grid size={{ xs: 12, sm: 6, md: 3 }}>
-                        <Typography
-                            variant="h6"
-                            sx={{ letterSpacing: 1, fontWeight: 500, mb: 2, color: "transparent" }}
-                        >
-                            Product Categories
-                        </Typography>
-                        <Stack spacing={2}>
-                            {productLinks2.map((item, i) => (
-                                <MUILink
-                                    key={i}
-                                    component={Link}
-                                    href={item.href}
-                                    underline="none"
-                                    sx={{
-                                        color: "#acacac",
-                                        fontSize: 16,
-                                        transition: "0.3s",
-                                        "&:hover": { color: "#EC1B24" },
-                                    }}
-                                >
-                                    {item.label}
-                                </MUILink>
-                            ))}
-                        </Stack>
-                    </Grid>
-
-                    {/* Company */}
-                    <Grid size={{ xs: 12, sm: 6, md: 3 }}>
-                        <Typography
-                            variant="h6"
-                            sx={{ letterSpacing: 1, fontWeight: 500, mb: 2, color: "#EC1B24" }}
-                        >
-                            Company
-                        </Typography>
-                        <Stack spacing={2}>
-                            {additionalLinks.map((item, i) => (
-                                <MUILink
-                                    key={i}
-                                    component={Link}
-                                    href={item.href}
-                                    underline="none"
-                                    sx={{
-                                        color: "#acacac",
-                                        fontSize: 16,
-                                        transition: "0.3s",
-                                        "&:hover": { color: "#EC1B24" },
-                                    }}
-                                >
-                                    {item.label}
-                                </MUILink>
-                            ))}
-                        </Stack>
-                    </Grid>
-
-                    {/* Stay With Us */}
-                    <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+                    
+                {/* Stay With Us */}
+                    <Grid size={{ xs: 12, sm: 6, md: 4 }}>
                         <Typography
                             variant="h6"
                             sx={{
@@ -298,6 +208,123 @@ const Footer = () => {
                             >
                                 <LinkedIn />
                             </IconButton>
+                        </Stack>
+                    </Grid>
+                    
+                    {/* Services */}
+                    <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+                        <Typography
+                            variant="h6"
+                            sx={{
+                                letterSpacing: 1,
+                                fontWeight: 500,
+                                mb: 2,
+                                color: "#EC1B24",
+                            }}
+                        >
+                            Product Categories
+                        </Typography>
+
+                        <Grid container spacing={2}>
+                            <Grid size={{ xs: 12, sm: 6 }}>
+                                <Stack spacing={2}>
+                                    {productLinks1.map(
+                                        (item, i) => (
+                                            <MUILink
+                                                key={i}
+                                                component={Link}
+                                                href={item.href}
+                                                underline="none"
+                                                sx={{
+                                                    color: "#acacac",
+                                                    fontSize: 16,
+                                                    transition: "0.3s",
+                                                    "&:hover": { color: "#EC1B24" },
+                                                }}
+                                            >
+                                                {item.label}
+                                            </MUILink>
+                                        )
+                                    )}
+                                </Stack>
+                            </Grid>
+                            <Grid size={{ xs: 12, sm: 6 }}>
+                                <Stack spacing={2}>
+                                    {productLinks2.map(
+                                        (item, i) => (
+                                            <MUILink
+                                                key={i}
+                                                component={Link}
+                                                href={item.href}
+                                                underline="none"
+                                                sx={{
+                                                    color: "#acacac",
+                                                    fontSize: 16,
+                                                    transition: "0.3s",
+                                                    "&:hover": { color: "#EC1B24" },
+                                                }}
+                                            >
+                                                {item.label}
+                                            </MUILink>
+                                        )
+                                    )}
+                                </Stack>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+
+                    {/* <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+                        <Typography
+                            variant="h6"
+                            sx={{ letterSpacing: 1, fontWeight: 500, mb: 2, color: "transparent" }}
+                        >
+                            Product Categories
+                        </Typography>
+                        <Stack spacing={2}>
+                            {productLinks2.map((item, i) => (
+                                <MUILink
+                                    key={i}
+                                    component={Link}
+                                    href={item.href}
+                                    underline="none"
+                                    sx={{
+                                        color: "#acacac",
+                                        fontSize: 16,
+                                        transition: "0.3s",
+                                        "&:hover": { color: "#EC1B24" },
+                                    }}
+                                >
+                                    {item.label}
+                                </MUILink>
+                            ))}
+                        </Stack>
+                    </Grid> */}
+
+                    {/* Company */}
+                    <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+                        <Typography
+                            variant="h6"
+                            sx={{ letterSpacing: 1, fontWeight: 500, mb: 2, color: "#EC1B24" }}
+                        >
+                            Company
+                        </Typography>
+                        <Stack spacing={2}>
+                            {additionalLinks.map((item, i) => (
+                                <MUILink
+                                    key={i}
+                                    component={Link}
+                                    href={item.href}
+                                    underline="none"
+                                    sx={{
+                                        color: "#acacac",
+                                        fontSize: 16,
+                                        transition: "0.3s",
+                                        "&:hover": { color: "#EC1B24" },
+                                    }}
+                                >
+                                    {item.label}
+                                </MUILink>
+                            ))}
                         </Stack>
                     </Grid>
                 </Grid>

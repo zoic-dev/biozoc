@@ -22,7 +22,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { styled } from "@mui/system";
-import { Phone } from "@mui/icons-material";
+import { Email, Facebook, LinkedIn, Phone, X as TwitterX, YouTube } from "@mui/icons-material";
 
 // === Styled Components ===
 const NavbarContainer = styled(AppBar)`
@@ -116,19 +116,88 @@ export default function Navbar() {
         <>
             {/* === Navbar === */}
 
-            <Box p={1} sx={{
-                background: "#617F00",
-                alignItems: "center"
-            }}>
-                <Stack direction={"row"}>
-                    <Phone fontSize="small" />
-                    <Typography sx={{
-                        color: 'white'
-                    }}>
-                        +91-9876800625
-                    </Typography>
+            <Box
+                px={2}
+                py={0.5}
+                sx={{
+                    background: "#617F00",
+                    color: "white",
+                    display: "flex",
+                    alignItems: "center",
+                }}
+            >
+                <Stack
+                    direction={{ xs: "column", sm: "row" }}
+                    spacing={{ xs: 1, sm: 3 }}
+                    alignItems="center"
+                    justifyContent="space-between"
+                    width="100%"
+                >
+                    {/* Phones + Email grouped */}
+                    <Stack
+                        direction={{ xs: "column", sm: "row" }}
+                        spacing={{ xs: 0.5, sm: 3 }}
+                        alignItems="center"
+                        flexWrap="wrap"
+                    >
+                        {/* Phone 1 */}
+                        <Stack direction="row" spacing={0.5} alignItems="center">
+                            <Phone fontSize="small" sx={{ color: "white" }} />
+                            <Link
+                                href="tel:+919876800625"
+                                underline="none"
+                                sx={{ color: "white", fontSize: "0.9rem" }}
+                            >
+                                +91 9876800625
+                            </Link>
+                        </Stack>
+
+                        {/* Phone 2 */}
+                        <Stack direction="row" spacing={0.5} alignItems="center">
+                            <Phone fontSize="small" sx={{ color: "white" }} />
+                            <Link
+                                href="tel:+919876800626"
+                                underline="none"
+                                sx={{ color: "white", fontSize: "0.9rem" }}
+                            >
+                                +91 9876800626
+                            </Link>
+                        </Stack>
+
+                        {/* Email */}
+                        <Stack direction="row" spacing={0.5} alignItems="center">
+                            <Email fontSize="small" sx={{ color: "white" }} />
+                            <Link
+                                href="mailto:info@biozoc.com"
+                                underline="none"
+                                sx={{ color: "white", fontSize: "0.9rem" }}
+                            >
+                                info@biozoc.com
+                            </Link>
+                        </Stack>
+                    </Stack>
+
+                    {/* Social Icons */}
+                    <Stack direction="row" spacing={1} alignItems="center">
+                        <IconButton size="small" href="https://www.facebook.com/biozoc/" sx={{ color: "white" }}>
+                            <Facebook fontSize="small" />
+                        </IconButton>
+
+                        <IconButton size="small" href="https://twitter.com/biozoc" sx={{ color: "white" }}>
+                            <TwitterX fontSize="small" />
+                        </IconButton>
+
+                        <IconButton size="small" href="https://www.youtube.com/channel/UCE2PX3YCrJzwWMxkNnkdXxw" sx={{ color: "white" }}>
+                            <YouTube fontSize="small" />
+                        </IconButton>
+
+                        <IconButton size="small" href="https://www.linkedin.com/in/biozoc-pharma-53b4a6193/" sx={{ color: "white" }}>
+                            <LinkedIn fontSize="small" />
+                        </IconButton>
+                    </Stack>
                 </Stack>
             </Box>
+
 
             <NavbarContainer position="sticky">
                 <Toolbar
