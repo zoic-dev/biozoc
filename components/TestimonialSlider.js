@@ -13,61 +13,51 @@ const testimonials = [
     text: "In the era of chemical Biozoc is providing wonderful herbal products for every kind of disease. Really commendable!",
     name: "Anul Ansari",
     location: "Jharkhand",
-    img: "/user1.jpg",
   },
   {
     text: "Biozoc’s herbal supplements have made a huge difference in my daily energy and immunity. Absolutely trust their natural approach!",
     name: "Meena Sharma",
     location: "Rajasthan",
-    img: "/user2.jpg",
   },
   {
     text: "Very satisfied with their protein powder and ayurvedic tonics. They really maintain quality and purity in every product.",
     name: "Rohit Verma",
     location: "Delhi",
-    img: "/user3.jpg",
   },
   {
     text: "After switching to Biozoc’s herbal range, my digestion and skin have improved drastically. The products feel genuinely natural!",
     name: "Poonam Sethi",
     location: "Punjab",
-    img: "/user4.jpg",
   },
   {
     text: "Excellent herbal solutions for common health issues. I’ve recommended Biozoc to my entire family!",
     name: "Amitabh Yadav",
     location: "Uttar Pradesh",
-    img: "/user5.jpg",
   },
   {
     text: "Biozoc provides affordable and trustworthy herbal care. The team is very responsive and professional too.",
     name: "Kiran Patel",
     location: "Gujarat",
-    img: "/user6.jpg",
   },
   {
     text: "I’ve been using Biozoc’s immunity booster syrup for months — very effective and completely side-effect free.",
     name: "Saurabh Mishra",
     location: "Madhya Pradesh",
-    img: "/user7.jpg",
   },
   {
     text: "Their products are authentic and show real results. Loved the packaging and timely delivery as well!",
     name: "Priya Nair",
     location: "Kerala",
-    img: "/user8.jpg",
   },
   {
     text: "I appreciate Biozoc’s dedication to Ayurveda. Their herbal capsules helped me manage stress naturally.",
     name: "Rakesh Kumar",
     location: "Haryana",
-    img: "/user9.jpg",
   },
   {
     text: "Every product I’ve tried from Biozoc has exceeded my expectations — safe, pure, and effective. Highly recommended!",
     name: "Sonia Mehta",
     location: "Himachal Pradesh",
-    img: "/user10.jpg",
   },
 ];
 
@@ -139,14 +129,16 @@ const TestimonialSlider = () => {
 
               <Stack direction="column" spacing={1} alignItems="center">
                 <Avatar
-                  src={item.img}
                   alt={item.name}
                   sx={{
                     width: 60,
                     height: 60,
                     border: "1px solid white",
+                    bgcolor: "#fff2",
                   }}
-                />
+                >
+                  {item.name.charAt(0)}
+                </Avatar>
                 <Typography variant="body1" fontWeight={600}>
                   {item.name}
                 </Typography>

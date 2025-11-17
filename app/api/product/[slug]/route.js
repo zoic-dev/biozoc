@@ -6,7 +6,7 @@ export async function GET(req, context) {
   const slug = params?.slug;
 
   if (!slug) {
-    console.error("❌ Missing slug param in API route");
+    console.error("Missing slug param in API route");
     return NextResponse.json({ error: "Missing product slug" }, { status: 400 });
   }
 
@@ -33,10 +33,10 @@ export async function GET(req, context) {
       return NextResponse.json({ error: "Product not found" }, { status: 404 });
     }
 
-    console.log(`✅ Product fetched successfully for slug: ${slug}`);
+    console.log(`Product fetched successfully for slug: ${slug}`);
     return NextResponse.json(data[0]);
   } catch (error) {
-    console.error("🔥 Product API Error:", error);
+    console.error("Product API Error:", error);
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }

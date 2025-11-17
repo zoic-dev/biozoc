@@ -1,17 +1,24 @@
 "use client";
 
 import { AccessTime, Email, Phone } from "@mui/icons-material";
-import { Container, Grid, IconButton, Stack, Toolbar, Typography } from "@mui/material";
+import { Container, Grid, IconButton, Snackbar, Stack, Toolbar, Typography } from "@mui/material";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import FormProvider, { RHFTextField } from "@/components/contact-form";
-import { useState } from "react";
+import { forwardRef, useState } from "react";
 import Button from '@mui/material/Button';
+import MuiAlert from '@mui/material/Alert';
+
+const Alert = forwardRef(function Alert(props, ref) {
+    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
 
 export default function Contact() {
     const [isLoading, setLoading] = useState(false);
+    const [openSuccess, setOpenSuccess] = useState(false);
+    const [openFailure, setOpenFailure] = useState(false);
 
     const contactSchema = Yup.object().shape({
         name: Yup.string().required('Name is required'),
@@ -44,10 +51,29 @@ export default function Contact() {
     const onSubmit = async (data) => {
         try {
             setLoading(true);
-            console.log(data);
+
+            const response = await fetch("/api/send-mail", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+                setOpenSuccess(true);
+            }
+            else {
+                setOpenFailure(true);
+            }
         }
         catch (error) {
             console.error(error);
+            reset();
+            setError("afterSubmit", {
+                ...error,
+                message: error.message,
+            });
         }
         finally {
             reset();
@@ -55,8 +81,37 @@ export default function Contact() {
         }
     }
 
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+
+        setOpenSuccess(false);
+        setOpenFailure(false);
+    };
+
     return (
         <Container>
+
+            <Snackbar open={openSuccess}
+                autoHideDuration={6000}
+                onClose={handleClose}
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+            >
+                <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
+                    Query sent successfully
+                </Alert>
+            </Snackbar>
+
+            <Snackbar open={openFailure}
+                autoHideDuration={6000}
+                onClose={handleClose}
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+            >
+                <Alert onClose={handleClose} severity="warning" sx={{ width: '100%' }}>
+                    Failed to send query at the moment. Try again after sometime.
+                </Alert>
+            </Snackbar>
 
             {/* Contact Grid */}
             <Grid

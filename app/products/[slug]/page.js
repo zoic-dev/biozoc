@@ -13,7 +13,6 @@ import {
   Fade,
   Chip,
   Stack,
-  IconButton,
 } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
@@ -76,8 +75,7 @@ export default function ProductPage() {
       </Box>
     );
 
-  const { name, images, price_html, short_description, description, categories, sku } =
-    product;
+  const { name, images, price_html, short_description, description, categories, sku } = product;
 
   return (
     <Fade in>
@@ -108,7 +106,7 @@ export default function ProductPage() {
 
         <Grid container spacing={6}>
           {/* Product Image */}
-          <Grid item xs={12} md={5}>
+          <Grid size={{ xs: 12, md: 5 }}>
             <Paper
               elevation={4}
               sx={{
@@ -140,7 +138,7 @@ export default function ProductPage() {
           </Grid>
 
           {/* Product Info */}
-          <Grid item xs={12} md={7}>
+          <Grid size={{ xs: 12, md: 7 }}>
             <Stack spacing={2}>
               <Typography variant="h3" fontWeight={700}>
                 {name}
@@ -203,6 +201,8 @@ export default function ProductPage() {
                 variant="contained"
                 size="large"
                 startIcon={<ShoppingCartIcon />}
+                component={Link}
+                href="/contact"
                 sx={{
                   mt: 2,
                   alignSelf: "flex-start",

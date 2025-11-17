@@ -205,6 +205,8 @@ export default function Navbar() {
                                 )
                             )}
                             <Button
+                                component={Link}
+                                href="/contact"
                                 variant="outlined"
                                 sx={{
                                     borderColor: "#EC1C24",
