@@ -1,21 +1,10 @@
 // app/layout.js
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "./fonts.css";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Script from "next/script";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: "Biozoc Inc. | Leading Pharma & Nutraceutical Manufacturer in India",
@@ -33,7 +22,7 @@ export default function RootLayout({ children }) {
         Keep className stable and predictable
         — no dynamic values that can differ between SSR and client.
       */}
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body>
         <Navbar />
         <main>{children}</main>
         <Footer />
