@@ -16,46 +16,46 @@ import { Email, Facebook, Instagram, LinkedIn, Phone, X, YouTube } from "@mui/ic
 const productLinks1 = [
     {
         label: 'Tablets',
-        href: '/tablets'
+        href: '/products/category/tablets/38'
     },
     {
         label: 'Capsules',
-        href: '/capsules'
+        href: '/products/category/capsules/37'
     },
     {
         label: 'Syrup',
-        href: '/syrup'
+        href: '/products/category/syrups/36'
     },
     {
         label: 'Injectables',
-        href: '/injectables'
+        href: '/products/category/injections/15'
     },
     {
         label: 'Ointments',
-        href: '/ointments'
+        href: '/products/category/ointments/39'
     }
 ];
 
 const productLinks2 = [
     {
         label: 'Protein',
-        href: '/protein'
+        href: '/products/category/protein/40'
     },
     {
         label: 'Energy Drink',
-        href: '/energy-drink'
+        href: '/products/category/energy-drinks/49'
     },
     {
         label: 'Gyanaec Range',
-        href: '/gyanaec-range'
+        href: '/products/category/gynae/52'
     },
     {
         label: 'Herbal',
-        href: '/herbal'
+        href: '/products/category/herbal/48'
     },
     {
-        label: 'Soap',
-        href: '/soap'
+        label: 'Sachets',
+        href: '/products/category/sachets/41'
     }
 ];
 
