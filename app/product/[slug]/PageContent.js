@@ -123,24 +123,47 @@ export default function PageContent({ initialProduct, slug }) {
                 <Grid container spacing={6}>
                     {/* Product Image */}
                     <Grid size={{ xs: 12, md: 5 }}>
-                        {
-                            product?.images && <ProductImages images={images} />
-                        }
+                        <ProductImages
+                            images={
+                                product && product.images && product.images.length > 0
+                                    ? product.images
+                                    : [
+                                        {
+                                            src: "/placeholder.jpg",
+                                            alt: "No image available",
+                                        },
+                                    ]
+                            }
+                        />
                     </Grid>
 
                     {/* Product Info */}
                     <Grid size={{ xs: 12, md: 7 }}>
                         <Stack spacing={2}>
-                            <Typography variant="h3" fontWeight={700}>
+                            <Typography
+                                component="h1"
+                                variant="h1"
+                                fontWeight={700}
+                                sx={{
+                                    fontSize: {
+                                        xs: "1.5rem",   // mobile  (≈ h6)
+                                        sm: "1.75rem",  // small tablets
+                                        md: "2rem",     // tablets (≈ h5)
+                                        lg: "2.125rem", // desktop (≈ h4)
+                                    },
+                                    lineHeight: 1.3,
+                                }}
+                            >
                                 {name}
                             </Typography>
+
 
                             {categories?.length > 0 && (
                                 <Stack direction="row" spacing={1} flexWrap="wrap">
                                     {categories.map((cat) => (
                                         <Link
                                             key={cat.id}
-                                            href={`/products/category/${cat.slug}/${cat.id}`}
+                                            href={`/product/category/${cat.slug}/${cat.id}`}
                                             passHref
                                             style={{ textDecoration: "none" }}
                                         >
@@ -151,7 +174,7 @@ export default function PageContent({ initialProduct, slug }) {
                                                 sx={{
                                                     fontSize: "0.9rem",
                                                     fontWeight: 500,
-                                                    borderColor: "#ddd",
+                                                    borderColor: "#1F6A36",
                                                     "&:hover": {
                                                         backgroundColor: "#f5f5f5",
                                                     },

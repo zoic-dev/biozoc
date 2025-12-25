@@ -84,7 +84,7 @@ export default function PageContent() {
                         <Grid container spacing={4}>
                             {products.map((product) => (
                                 <Grid key={product.id} size={{ xs: 6, sm: 4, md: 3 }}>
-                                    <Link href={`/products/${product.slug}`} passHref>
+                                    <Link href={`/product/${product.slug}`} passHref>
                                         <Card
                                             sx={{
                                                 height: "100%",
@@ -101,11 +101,12 @@ export default function PageContent() {
                                         >
                                             <CardMedia
                                                 component="img"
-                                                height="200"
                                                 image={product.images?.[0]?.src || "/placeholder.jpg"}
                                                 alt={product.name}
                                                 sx={{
-                                                    objectFit: "contain",
+                                                    width: "100%",        // take full card width
+                                                    aspectRatio: "1 / 1", // keep square
+                                                    objectFit: "cover",   // fill square, may crop slightly
                                                     bgcolor: "#fafafa",
                                                 }}
                                             />

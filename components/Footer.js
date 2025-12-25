@@ -16,46 +16,46 @@ import { Email, Facebook, Instagram, LinkedIn, Phone, X, YouTube } from "@mui/ic
 const productLinks1 = [
     {
         label: 'Tablets',
-        href: '/products/category/tablets/38'
+        href: '/product/category/tablets/38'
     },
     {
         label: 'Capsules',
-        href: '/products/category/capsules/37'
+        href: '/product/category/capsules/37'
     },
     {
         label: 'Syrup',
-        href: '/products/category/syrups/36'
+        href: '/product/category/syrups/36'
     },
     {
         label: 'Injectables',
-        href: '/products/category/injections/15'
+        href: '/product/category/injections/15'
     },
     {
         label: 'Ointments',
-        href: '/products/category/ointments/39'
+        href: '/product/category/ointments/39'
     }
 ];
 
 const productLinks2 = [
     {
         label: 'Protein',
-        href: '/products/category/protein/40'
+        href: '/product/category/protein/40'
     },
     {
         label: 'Energy Drink',
-        href: '/products/category/energy-drinks/49'
+        href: '/product/category/energy-drinks/49'
     },
     {
         label: 'Gyanaec Range',
-        href: '/products/category/gynae/52'
+        href: '/product/category/gynae/52'
     },
     {
         label: 'Herbal',
-        href: '/products/category/herbal/48'
+        href: '/product/category/herbal/48'
     },
     {
         label: 'Sachets',
-        href: '/products/category/sachets/41'
+        href: '/product/category/sachets/41'
     }
 ];
 

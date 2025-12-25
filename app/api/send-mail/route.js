@@ -14,7 +14,9 @@ export async function POST(request) {
         } = body;
 
         const transporter = nodemailer.createTransport({
-            service: "gmail",
+            host: "smtp.hostinger.com",
+            port: 465,
+            secure: true,
             auth: {
                 user: process.env.EMAIL_USER,
                 pass: process.env.EMAIL_PASS,
@@ -23,11 +25,13 @@ export async function POST(request) {
 
         const html = generateEmailTemplate(name, email, phone, city, message);
 
+        // User-facing subject (important)
         const mailOptions = {
-            from: process.env.EMAIL_USER,
+            from: `"Biozoc INC." <${process.env.EMAIL_USER}>`,
             to: email,
+            replyTo: process.env.EMAIL_USER,
             cc: process.env.EMAIL_CC,
-            subject: "Biozoc Inc. - Contact Us",
+            subject: "We’ve received your enquiry | Biozoc INC.",
             html: html,
         };
 

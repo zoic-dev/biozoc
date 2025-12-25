@@ -1,4 +1,4 @@
-// /products/[slug]/page.js
+// /product/[slug]/page.js
 import PageContent from "./PageContent";
 import YoastHead from "./YoastHead"; // Client component to inject SEO
 

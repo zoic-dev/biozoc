@@ -16,6 +16,17 @@ const nextConfig = {
       }
     ],
   },
+
+  async redirects() {
+    return [
+      // {
+      //   source: "/third-party-manufacturing-of-ayurvedic-products",
+      //   destination: "/third-party-manufacturing",
+      //   permanent: true
+      // },
+
+    ]
+  }
 };
 
 export default nextConfig;

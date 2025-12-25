@@ -22,7 +22,7 @@ export default function PostsList({ initialPage = 1 }) {
   const [currentPage, setCurrentPage] = useState(initialPage);
   const [totalPages, setTotalPages] = useState(1);
 
-  const perPage = 6;
+  const perPage = 12;
 
   const fetchPosts = async (page) => {
     setLoading(true);
@@ -87,7 +87,7 @@ export default function PostsList({ initialPage = 1 }) {
                         alt={post.title || "Post image"}
                         sx={{
                           width: "100%",
-                          height: 220,
+                          height: 'aoto',
                           objectFit: "cover",
                         }}
                       />
@@ -104,6 +104,19 @@ export default function PostsList({ initialPage = 1 }) {
                         }}
                       >
                         {post.title}
+                      </Typography>
+
+                      {/* BLOG DATE */}
+                      <Typography
+                        variant="caption"
+                        color="text.secondary"
+                        sx={{ display: "block" }}
+                      >
+                        {new Date(post.date).toLocaleDateString("en-IN", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })}
                       </Typography>
 
                       <Typography

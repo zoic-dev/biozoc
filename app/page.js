@@ -9,62 +9,62 @@ const productCategories = [
   {
     label: "Capsules",
     img: "/categories/capsules.jpg",
-    link: "/products/category/capsules/37"
+    link: "/product/category/capsules/37"
   },
   {
     label: "Protein",
     img: "/categories/protein.jpg",
-    link: "/products/category/protein/40"
+    link: "/product/category/protein/40"
   },
   {
     label: "Ointments",
     img: "/categories/ointments.jpg",
-    link: "/products/category/ointments/39"
+    link: "/product/category/ointments/39"
   },
   {
     label: "Herbal",
     img: "/categories/herbal.jpg",
-    link: "/products/category/herbal/48"
+    link: "/product/category/herbal/48"
   },
   {
     label: "Syrup",
     img: "/categories/syrup.jpg",
-    link: "/products/category/syrup/36"
+    link: "/product/category/syrup/36"
   },
   {
     label: "Energy Drink",
     img: "/categories/energy-drinks.jpg",
-    link: "/products/category/energy-drinks/49"
+    link: "/product/category/energy-drinks/49"
   },
   {
     label: "Injectables",
     img: "/categories/injectables.jpg",
-    link: "/products/category/injectables/61"
+    link: "/product/category/injectables/61"
   },
   {
     label: "Lotions",
     img: "/categories/lotions.jpg",
-    link: "/products/category/lotions/44"
+    link: "/product/category/lotions/44"
   },
   {
     label: "Sachets",
     img: "/categories/sachets.jpg",
-    link: "/products/category/sachets/41"
+    link: "/product/category/sachets/41"
   },
   {
     label: "Gynaec Range",
     img: "/categories/gynaec.jpg",
-    link: "/products/category/gynaec/52"
+    link: "/product/category/gynaec/52"
   },
   {
     label: "Tablets",
     img: "/categories/tablets.jpg",
-    link: "/products/category/tablets/38"
+    link: "/product/category/tablets/38"
   },
   {
     label: "Soap",
     img: "/categories/soap.jpg",
-    link: "/products/category/soap/43"
+    link: "/product/category/soap/43"
   }
 ];
 

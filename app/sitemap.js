@@ -1,171 +1,165 @@
-// app/sitemap.js
 export const dynamic = "force-dynamic";
 
-/* ============================================================================ 
-   🔵 FETCH ALL PRODUCTS (INCLUDING PAGINATION)
+/* ============================================================================
+   🔵 FETCH ALL PRODUCTS (Including Pagination)
 ============================================================================ */
 async function fetchAllProducts(wpUrl) {
-  const consumerKey = process.env.WC_CONSUMER_KEY;
-  const consumerSecret = process.env.WC_CONSUMER_SECRET;
+    let page = 1;
+    let allProducts = [];
+    let batch = [];
 
-  let page = 1;
-  let allProducts = [];
-  let batch = [];
+    do {
+        const response = await fetch(
+            `${wpUrl}/wp-json/wp/v2/product?per_page=100&page=${page}&_fields=slug,modified`,
+            { cache: "no-store" }
+        );
 
-  do {
-    const res = await fetch(
-      `${wpUrl}/wp-json/wc/v3/products?per_page=100&page=${page}&_fields=slug,date_modified`,
-      {
-        cache: "no-store",
-        headers: {
-          Authorization:
-            "Basic " +
-            Buffer.from(`${process.env.WP_USERNAME}:${process.env.WP_APP_PASSWORD}`).toString("base64"),
-        },
-      }
-    );
+        batch = await response.json();
 
-    batch = await res.json();
+        if (Array.isArray(batch) && batch.length > 0) {
+            allProducts = [...allProducts, ...batch];
+        }
 
-    if (Array.isArray(batch) && batch.length > 0) {
-      allProducts = [...allProducts, ...batch];
-    }
+        page++;
+    } while (Array.isArray(batch) && batch.length === 100);
 
-    page++;
-  } while (Array.isArray(batch) && batch.length === 100);
-
-  return allProducts;
+    return allProducts;
 }
 
-
-/* ============================================================================ 
-   🔵 FETCH ALL PRODUCT CATEGORIES (WooCommerce REST API WITH AUTH)
+/* ============================================================================
+   🔵 FETCH ALL PRODUCT CATEGORIES
 ============================================================================ */
-async function fetchAllProductCategories(wpUrl) {
-  const consumerKey = process.env.WC_CONSUMER_KEY;
-  const consumerSecret = process.env.WC_CONSUMER_SECRET;
-
-  let page = 1;
-  let allCategories = [];
-  let batch = [];
-
-  do {
-    const res = await fetch(
-      `${wpUrl}/wp-json/wc/v3/products/categories?per_page=100&page=${page}&orderby=id&_fields=id,slug`,
-      {
-        cache: "no-store",
-        headers: {
-          Authorization:
-            "Basic " +
-            Buffer.from(`${process.env.WP_USERNAME}:${process.env.WP_APP_PASSWORD}`).toString("base64"),
-        },
-      }
+async function fetchAllCategories(wpUrl) {
+    const response = await fetch(
+        `${wpUrl}/wp-json/wc/v2/products/categories?per_page=100&_fields=slug,id`,
+        {
+            headers: {
+                Authorization: `Basic ${Buffer.from(
+                    `${process.env.WP_USERNAME}:${process.env.WP_APP_PASSWORD}`
+                ).toString("base64")}`,
+                cache: "no-store",
+            },
+        }
     );
 
-    batch = await res.json();
-    if (Array.isArray(batch) && batch.length > 0) {
-      allCategories = [...allCategories, ...batch];
-    }
-
-    page++;
-  } while (Array.isArray(batch) && batch.length === 100);
-
-  return allCategories;
+    const categories = await response.json();
+    return Array.isArray(categories) ? categories : [];
 }
 
-/* ============================================================================ 
-   🔵 FETCH ALL BLOGS
+/* ============================================================================
+   🔵 FETCH ALL BLOG POSTS
 ============================================================================ */
 async function fetchAllBlogs(wpUrl) {
-  let page = 1;
-  let allBlogs = [];
-  let batch = [];
+    let page = 1;
+    let blogs = [];
+    let batch = [];
 
-  do {
-    const res = await fetch(
-      `${wpUrl}/wp-json/wp/v2/posts?per_page=100&page=${page}&_fields=slug,date`,
-      { cache: "no-store" }
-    );
+    do {
+        const res = await fetch(
+            `${wpUrl}/wp-json/wp/v2/posts?per_page=100&page=${page}&_fields=slug,modified`,
+            { cache: "no-store" }
+        );
 
-    batch = await res.json();
-    if (Array.isArray(batch) && batch.length > 0) {
-      allBlogs = [...allBlogs, ...batch];
-    }
+        batch = await res.json();
 
-    page++;
-  } while (Array.isArray(batch) && batch.length === 100);
+        if (Array.isArray(batch) && batch.length > 0) {
+            blogs = [...blogs, ...batch];
+        }
 
-  return allBlogs;
+        page++;
+    } while (Array.isArray(batch) && batch.length === 100);
+
+    return blogs;
 }
 
-/* ============================================================================ 
+/* ============================================================================
    🔵 FETCH ALL BLOG CATEGORIES
 ============================================================================ */
 async function fetchAllBlogCategories(wpUrl) {
-  const res = await fetch(
-    `${wpUrl}/wp-json/wp/v2/categories?per_page=100&_fields=id,slug`,
-    { cache: "no-store" }
-  );
+    const res = await fetch(
+        `${wpUrl}/wp-json/wp/v2/categories?per_page=100&_fields=slug,id`,
+        { cache: "no-store" }
+    );
 
-  const categories = await res.json();
-  return Array.isArray(categories) ? categories : [];
+    const categories = await res.json();
+    return Array.isArray(categories) ? categories : [];
 }
 
-/* ============================================================================ 
+/* ============================================================================
    🔵 MAIN SITEMAP FUNCTION
 ============================================================================ */
 export default async function sitemap() {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  const wpUrl = process.env.NEXT_PUBLIC_SITE_URL;
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+    const wpUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
-  // 1️⃣ Static pages
-  const staticPages = [
-    "",
-    "/about",
-    "/contact",
-    "/products",
-    "/pcd-franchise",
-    "/third-party-manufacturing",
-    "/blog",
-  ].map((path) => ({
-    url: `${baseUrl}${path}`,
-    lastModified: new Date(),
-  }));
+    /* ------------------------------------------------------
+       1. Fetch Dynamic Data
+    ------------------------------------------------------ */
+    const [products, productCategories, blogs, blogCategories] = await Promise.all([
+        fetchAllProducts(wpUrl),
+        fetchAllCategories(wpUrl),
+        fetchAllBlogs(wpUrl),
+        fetchAllBlogCategories(wpUrl),
+    ]);
 
-  // 2️⃣ Fetch dynamic products
-  const products = await fetchAllProducts(wpUrl);
-  const productUrls = products.map((product) => ({
-    url: `${baseUrl}/products/${product.slug}`,
-    lastModified: product.modified || new Date(),
-  }));
+    /* ------------------------------------------------------
+       2. Static Pages
+    ------------------------------------------------------ */
+    const staticPages = [
+        "",
+        "/about",
+        "/contact",
+        "/products",
+        "/pcd-franchise",
+        "/third-party-manufacturing",
+        "/blog",
+    ].map((path) => ({
+        url: `${baseUrl}${path}`,
+        lastModified: new Date(),
+    }));
 
-  // 3️⃣ Fetch product categories
-  const productCategories = await fetchAllProductCategories(wpUrl);
-  const productCategoryUrls = productCategories.map((cat) => ({
-    url: `${baseUrl}/products/category/${cat.slug}/${cat.id}`,
-    lastModified: new Date(),
-  }));
+    /* ------------------------------------------------------
+       3. Dynamic Product URLs
+    ------------------------------------------------------ */
+    const productUrls = products.map((product) => ({
+        url: `${baseUrl}/product/${product.slug}`,
+        lastModified: product.modified || new Date(),
+    }));
 
-  // 4️⃣ Fetch blogs
-  const blogs = await fetchAllBlogs(wpUrl);
-  const blogUrls = blogs.map((blog) => ({
-    url: `${baseUrl}/blog/${blog.slug}`,
-    lastModified: blog.date || new Date(),
-  }));
+    /* ------------------------------------------------------
+       4. Dynamic Product Category URLs
+    ------------------------------------------------------ */
+    const productCategoryUrls = productCategories.map((category) => ({
+        url: `${baseUrl}/product/category/${category.slug}/${category.id}`,
+        lastModified: new Date(),
+    }));
 
-  // 5️⃣ Fetch blog categories
-  const blogCategories = await fetchAllBlogCategories(wpUrl);
-  const blogCategoryUrls = blogCategories.map((cat) => ({
-    url: `${baseUrl}/blog/category/${cat.slug}/${cat.id}`,
-    lastModified: new Date(),
-  }));
+    /* ------------------------------------------------------
+       5. Dynamic Blog URLs
+          Follows: /blog/[slug]
+    ------------------------------------------------------ */
+    const blogUrls = blogs.map((blog) => ({
+        url: `${baseUrl}/blog/${blog.slug}`,
+        lastModified: blog.modified || new Date(),
+    }));
 
-  // 6️⃣ Final sitemap array
-  return [
-    ...staticPages,
-    ...productUrls,
-    ...productCategoryUrls,
-    ...blogUrls,
-    ...blogCategoryUrls,
-  ];
+    /* ------------------------------------------------------
+       6. Dynamic Blog Category URLs
+          Follows: /blog/category/[slug]/[id]
+    ------------------------------------------------------ */
+    const blogCategoryUrls = blogCategories.map((category) => ({
+        url: `${baseUrl}/blog/category/${category.slug}/${category.id}`,
+        lastModified: new Date(),
+    }));
+
+    /* ------------------------------------------------------
+       7. Final Sitemap Output
+    ------------------------------------------------------ */
+    return [
+        ...staticPages,
+        ...productUrls,
+        ...productCategoryUrls,
+        ...blogUrls,
+        ...blogCategoryUrls,
+    ];
 }

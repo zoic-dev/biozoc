@@ -91,7 +91,7 @@ export default function BlogCategoryClient({ posts: initialPosts, slug, id, curr
                         alt={post.title || "Post image"}
                         sx={{
                           width: "100%",
-                          height: 220,
+                          height: 'auto',
                           objectFit: "cover",
                         }}
                       />

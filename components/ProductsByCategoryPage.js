@@ -91,7 +91,7 @@ export default function ProductsByCategoryPage({ categorySlug, categoryId }) {
                     <Grid container spacing={4}>
                         {products.map((product) => (
                             <Grid key={product.id} size={{ xs: 6, sm: 4, md: 3 }}>
-                                <Link href={`/products/${product.slug}`} passHref>
+                                <Link href={`/product/${product.slug}`} passHref>
                                     <Card
                                         sx={{
                                             height: "100%",
