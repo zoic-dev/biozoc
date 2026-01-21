@@ -10,6 +10,7 @@ import FormProvider, { RHFTextField } from "@/components/contact-form";
 import { forwardRef, useState } from "react";
 import Button from '@mui/material/Button';
 import MuiAlert from '@mui/material/Alert';
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Alert = forwardRef(function Alert(props, ref) {
     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -19,6 +20,8 @@ export default function PageContent() {
     const [isLoading, setLoading] = useState(false);
     const [openSuccess, setOpenSuccess] = useState(false);
     const [openFailure, setOpenFailure] = useState(false);
+    const [failureMessage, setFailureMessage] = useState("");
+    const [captchaToken, setCaptchaToken] = useState(null);
 
     const contactSchema = Yup.object().shape({
         name: Yup.string().required('Name is required'),
@@ -49,6 +52,12 @@ export default function PageContent() {
     } = methods;
 
     const onSubmit = async (data) => {
+        if (!captchaToken) {
+            setOpenFailure(true);
+            setFailureMessage("Please verify that you are not a robot and try again.");
+            return;
+        }
+
         try {
             setLoading(true);
 
@@ -65,6 +74,7 @@ export default function PageContent() {
             }
             else {
                 setOpenFailure(true);
+                setFailureMessage("Failed to send query at the moment. Try again after sometime.")
             }
         }
         catch (error) {
@@ -74,9 +84,13 @@ export default function PageContent() {
                 ...error,
                 message: error.message,
             });
+            setOpenFailure(true);
+            setFailureMessage("Failed to send query at the moment. Try again after sometime.")
         }
         finally {
             reset();
+            setCaptchaToken(null);
+            setFailureMessage("");
             setLoading(false);
         }
     }
@@ -283,6 +297,11 @@ export default function PageContent() {
                                 label="Message"
                                 multiline
                                 rows={4}
+                            />
+
+                            <ReCAPTCHA
+                                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                                onChange={(token) => setCaptchaToken(token)}
                             />
 
                             <Button
