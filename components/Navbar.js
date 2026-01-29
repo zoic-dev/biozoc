@@ -86,7 +86,10 @@ export default function Navbar() {
     const theme = useTheme();
     const isMobile = useMediaQuery("(max-width:1000px)");
 
-    const toggleDrawer = () => setOpenDrawer(!openDrawer);
+    const toggleDrawer = () => {
+        setOpenDrawer(!openDrawer);
+        setDrawerProducts(false);
+    };
     const toggleDrawerProducts = () => setDrawerProducts(!drawerProducts);
 
     const navLinks = [
@@ -360,7 +363,7 @@ export default function Navbar() {
                                 </Collapse>
                             </Box>
                         ) : (
-                            <ListItem key={i}>
+                            <ListItem key={i} onClick={toggleDrawer}>
                                 <Link href={link.href}>
                                     <NavLink active={pathname === link.href ? 1 : 0}>
                                         {link.label}

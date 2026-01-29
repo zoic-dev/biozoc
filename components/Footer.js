@@ -73,6 +73,10 @@ const additionalLinks = [
         href: '/contact'
     },
     {
+        label: 'FAQs',
+        href: '/frequently-asked-questions'
+    },
+    {
         label: 'PCD Pharma',
         href: '/pcd-franchise'
     },
