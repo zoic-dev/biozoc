@@ -113,7 +113,10 @@ export default async function sitemap() {
         "/pcd-franchise",
         "/third-party-manufacturing",
         "/blog",
-        "/frequently-asked-questions"
+        "/frequently-asked-questions",
+        "/terms-and-conditions",
+        "/privacy-policy",
+        "/warranty-and-services",
     ].map((path) => ({
         url: `${baseUrl}${path}`,
         lastModified: new Date(),

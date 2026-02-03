@@ -10,12 +10,17 @@ import {
     ListItemText,
 } from "@mui/material";
 
-// ✅ Basic SEO (Next.js App Router)
+/* =========================
+   SEO – Next.js App Router
+========================= */
 export const metadata = {
-    title: "Privacy Policy | Your Brand Name",
+    title: "Privacy Policy | Biozoc – Zoic Pharmaceuticals",
     description:
-        "This Privacy Policy explains how we collect, use, disclose, and protect your personal data when you use our services.",
+        "Read Biozoc’s Privacy Policy to understand how personal and business information is collected, used, and protected by Zoic Pharmaceuticals",
     robots: "index, follow",
+    alternates: {
+        canonical: "https://www.biozoc.com/privacy-policy",
+    },
 };
 
 export default function PrivacyPolicyPage() {
@@ -27,213 +32,191 @@ export default function PrivacyPolicyPage() {
             </Typography>
 
             <Typography variant="body2" color="text.secondary" sx={{ mb: 4 }}>
-                Effective date: January 30, 2026
+                Biozoc – A brand of Zoic Pharmaceuticals
             </Typography>
 
             <Divider sx={{ mb: 4 }} />
 
-            {/* Intro */}
+            {/* Introduction */}
             <Box sx={{ mb: 5 }}>
                 <Typography variant="body1" paragraph>
-                    Strollik (“us”, “we”, or “our”) operates our website (the “Service”).
-                    This page informs you of our policies regarding the collection, use,
-                    and disclosure of personal data when you use our Service and the
-                    choices you have associated with that data.
+                    This Privacy Policy explains how <strong>Biozoc</strong>, a brand
+                    operated by <strong>Zoic Pharmaceuticals</strong>, collects,
+                    uses, and protects information shared by visitors and business
+                    associates through <strong>www.biozoc.com</strong> (“Website”).
+                </Typography>
+
+                <Typography variant="body1" paragraph>
+                    By accessing this Website, you agree to the terms of this Privacy
+                    Policy. If you do not agree, please discontinue use of the Website.
                 </Typography>
 
                 <Typography variant="body1">
-                    By using the Service, you agree to the collection and use of
-                    information in accordance with this Privacy Policy. Terms used in this
-                    Privacy Policy have the same meanings as in our Terms and Conditions.
+                    This policy is framed in accordance with the Information Technology
+                    Act, 2000 and applicable rules thereunder.
                 </Typography>
             </Box>
 
-            {/* Information Collection */}
+            {/* Information We Collect */}
             <Box sx={{ mb: 5 }}>
                 <Typography variant="h5" fontWeight={600} gutterBottom>
-                    Information Collection and Use
+                    Information We Collect
                 </Typography>
 
-                <Typography variant="body1">
-                    We collect several different types of information for various purposes
-                    to provide and improve our Service to you.
-                </Typography>
-            </Box>
-
-            {/* Types of Data */}
-            <Box sx={{ mb: 5 }}>
-                <Typography variant="h5" fontWeight={600} gutterBottom>
-                    Types of Data Collected
-                </Typography>
-
-                <Typography variant="h6" gutterBottom>
-                    Personal Data
-                </Typography>
-
-                <Typography variant="body1" paragraph>
-                    While using our Service, we may ask you to provide us with certain
-                    personally identifiable information that can be used to contact or
-                    identify you (“Personal Data”).
-                </Typography>
-
-                <Typography variant="h6" gutterBottom>
-                    Usage Data
-                </Typography>
-
-                <Typography variant="body1" paragraph>
-                    We may also collect information on how the Service is accessed and
-                    used. This Usage Data may include your IP address, browser type,
-                    browser version, pages visited, time and date of visits, time spent on
-                    pages, and other diagnostic data.
-                </Typography>
-
-                <Typography variant="h6" gutterBottom>
-                    Tracking & Cookies Data
-                </Typography>
-
-                <Typography variant="body1" paragraph>
-                    We use cookies and similar tracking technologies to track activity on
-                    our Service and store certain information. You can instruct your
-                    browser to refuse cookies, but some portions of the Service may not
-                    function properly.
-                </Typography>
-
-                <List>
+                <List
+                    sx={{
+                        listStyleType: "disc",
+                        pl: 4,
+                        "& .MuiListItem-root": {
+                            display: "list-item",
+                            paddingLeft: 0,
+                        },
+                    }}
+                >
                     <ListItem>
-                        <ListItemText primary="Session Cookies – to operate the Service" />
+                        <ListItemText primary="Name of individual or organisation" />
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="Preference Cookies – to remember preferences" />
+                        <ListItemText primary="Email address and phone number" />
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="Security Cookies – for security purposes" />
+                        <ListItemText primary="City, state, and country" />
+                    </ListItem>
+                    <ListItem>
+                        <ListItemText primary="Business enquiry details" />
+                    </ListItem>
+                    <ListItem>
+                        <ListItemText primary="Information voluntarily submitted via forms, email, or phone" />
                     </ListItem>
                 </List>
+
+                <Typography variant="body1">
+                    We do not collect online payment details or sensitive financial
+                    information through this Website.
+                </Typography>
             </Box>
 
-            {/* Use of Data */}
+            {/* Purpose */}
             <Box sx={{ mb: 5 }}>
                 <Typography variant="h5" fontWeight={600} gutterBottom>
-                    Use of Data
+                    Purpose of Data Collection
                 </Typography>
 
-                <List>
+                <List
+                    sx={{
+                        listStyleType: "disc",
+                        pl: 4,
+                        "& .MuiListItem-root": {
+                            display: "list-item",
+                            paddingLeft: 0,
+                        },
+                    }}
+                >
                     <ListItem>
-                        <ListItemText primary="To provide and maintain the Service" />
+                        <ListItemText primary="Responding to business and service enquiries" />
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="To notify you about changes to our Service" />
+                        <ListItemText primary="Providing information about the pharmaceutical services offered by Biozoc" />
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="To provide customer care and support" />
+                        <ListItemText primary="Internal record keeping and communication" />
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="To monitor and improve Service usage" />
+                        <ListItemText primary="Improving Website functionality and user experience" />
                     </ListItem>
                 </List>
-            </Box>
-
-            {/* Transfer of Data */}
-            <Box sx={{ mb: 5 }}>
-                <Typography variant="h5" fontWeight={600} gutterBottom>
-                    Transfer of Data
-                </Typography>
 
                 <Typography variant="body1">
-                    Your information may be transferred to and maintained on computers
-                    located outside your jurisdiction where data protection laws may
-                    differ. By submitting your information, you consent to this transfer.
+                    Your information is never sold or shared for commercial gain.
                 </Typography>
             </Box>
 
-            {/* Disclosure */}
+            {/* Cookies */}
             <Box sx={{ mb: 5 }}>
                 <Typography variant="h5" fontWeight={600} gutterBottom>
-                    Disclosure of Data
-                </Typography>
-
-                <List>
-                    <ListItem>
-                        <ListItemText primary="To comply with legal obligations" />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemText primary="To protect and defend our rights or property" />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemText primary="To prevent or investigate wrongdoing" />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemText primary="To protect against legal liability" />
-                    </ListItem>
-                </List>
-            </Box>
-
-            {/* Security */}
-            <Box sx={{ mb: 5 }}>
-                <Typography variant="h5" fontWeight={600} gutterBottom>
-                    Security of Data
-                </Typography>
-
-                <Typography variant="body1">
-                    While we strive to use commercially acceptable means to protect your
-                    Personal Data, no method of transmission over the Internet is 100%
-                    secure, and we cannot guarantee absolute security.
-                </Typography>
-            </Box>
-
-            {/* Service Providers */}
-            <Box sx={{ mb: 5 }}>
-                <Typography variant="h5" fontWeight={600} gutterBottom>
-                    Service Providers
-                </Typography>
-
-                <Typography variant="body1">
-                    We may employ third-party companies and individuals to facilitate our
-                    Service. These third parties have access to Personal Data only to
-                    perform tasks on our behalf.
-                </Typography>
-            </Box>
-
-            {/* Analytics */}
-            <Box sx={{ mb: 5 }}>
-                <Typography variant="h5" fontWeight={600} gutterBottom>
-                    Analytics
+                    Cookies
                 </Typography>
 
                 <Typography variant="body1" paragraph>
-                    We may use third-party analytics tools such as Google Analytics to
-                    monitor and analyze Service usage.
-                </Typography>
-
-                <Typography variant="body2" color="text.secondary">
-                    Learn more at Google Privacy & Terms.
-                </Typography>
-            </Box>
-
-            {/* External Links */}
-            <Box sx={{ mb: 5 }}>
-                <Typography variant="h5" fontWeight={600} gutterBottom>
-                    Links to Other Sites
+                    The Website may use cookies to analyse visitor behaviour and enhance
+                    performance. Cookies do not personally identify users.
                 </Typography>
 
                 <Typography variant="body1">
-                    Our Service may contain links to external sites. We strongly advise
-                    reviewing the Privacy Policy of every site you visit.
+                    You may disable cookies through your browser settings; however, some
+                    Website features may be affected.
                 </Typography>
             </Box>
 
-            {/* Policy Updates */}
+            {/* Data Protection */}
             <Box sx={{ mb: 5 }}>
                 <Typography variant="h5" fontWeight={600} gutterBottom>
-                    Changes to This Privacy Policy
+                    Data Protection
                 </Typography>
 
                 <Typography variant="body1">
-                    We may update our Privacy Policy from time to time. Changes are
-                    effective when posted on this page.
+                    We adopt reasonable security measures to protect your information from
+                    unauthorised access or misuse. However, no online transmission can be
+                    guaranteed as fully secure.
                 </Typography>
             </Box>
 
+            {/* Third Party */}
+            <Box sx={{ mb: 5 }}>
+                <Typography variant="h5" fontWeight={600} gutterBottom>
+                    Third-Party Links
+                </Typography>
+
+                <Typography variant="body1">
+                    Our Website may include links to external websites. Biozoc is not
+                    responsible for the privacy practices or content of such third-party
+                    sites.
+                </Typography>
+            </Box>
+
+            {/* Children */}
+            <Box sx={{ mb: 5 }}>
+                <Typography variant="h5" fontWeight={600} gutterBottom>
+                    Children’s Privacy
+                </Typography>
+
+                <Typography variant="body1">
+                    Biozoc’s services are intended for professional and business use only.
+                    We do not knowingly collect data from individuals under 18 years of
+                    age.
+                </Typography>
+            </Box>
+
+            {/* Updates */}
+            <Box sx={{ mb: 5 }}>
+                <Typography variant="h5" fontWeight={600} gutterBottom>
+                    Policy Updates
+                </Typography>
+
+                <Typography variant="body1">
+                    Biozoc reserves the right to update this Privacy Policy at any time.
+                    Changes will be effective immediately upon posting on this page.
+                </Typography>
+            </Box>
+
+            {/* Contact */}
+            <Box>
+                <Typography variant="h5" fontWeight={600} gutterBottom>
+                    Contact Information
+                </Typography>
+
+                <Typography variant="body1">
+                    <strong>Biozoc</strong>
+                    <br />
+                    A brand of Zoic Pharmaceuticals
+                    <br />
+                    Website: https://www.biozoc.com
+                    <br />
+                    Email: info@biozoc.com
+                    <br />
+                    Phone: +91-9876800625
+                </Typography>
+            </Box>
         </Container>
     );
 }

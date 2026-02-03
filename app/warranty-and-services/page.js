@@ -10,12 +10,17 @@ import {
     ListItemText,
 } from "@mui/material";
 
-// ✅ Basic SEO
+/* =========================
+   SEO – Next.js App Router
+========================= */
 export const metadata = {
-    title: "Warranty & Services | Your Brand Name",
+    title: "Warranty & Services | Biozoc – Zoic Pharmaceuticals",
     description:
-        "Learn about our warranty, returns, RMA process, shipping timelines, and customer support services.",
+        "Review Biozoc’s Warranty & Services policy outlining quality standards, warranty limitations, service support, and delivery disclaimers.",
     robots: "index, follow",
+    alternates: {
+        canonical: "https://www.biozoc.com/warranty-and-services",
+    },
 };
 
 export default function WarrantyAndServicesPage() {
@@ -23,159 +28,200 @@ export default function WarrantyAndServicesPage() {
         <Container maxWidth="md" sx={{ py: { xs: 6, md: 10 } }}>
             {/* Page Header */}
             <Typography variant="h3" component="h1" gutterBottom fontWeight={700}>
-                Warranty and Services
+                Warranty & Services
+            </Typography>
+
+            <Typography variant="body2" color="text.secondary" sx={{ mb: 4 }}>
+                Biozoc – A brand of Zoic Pharmaceuticals
             </Typography>
 
             <Divider sx={{ mb: 4 }} />
 
-            {/* Section 1 */}
-            <Box sx={{ mb: 6 }}>
+            {/* Quality Commitment */}
+            <Box sx={{ mb: 5 }}>
                 <Typography variant="h5" fontWeight={600} gutterBottom>
-                    1. Returns and Warranty Requests
+                    Quality Commitment
                 </Typography>
 
                 <Typography variant="body1" paragraph>
-                    <strong>RMA Management – Manage, Sell, and Facilitate Easy Returns and
-                        Warranties.</strong>
-                </Typography>
-
-                <Typography variant="body1" paragraph>
-                    We manage the RMA process by allowing customers to request and manage
-                    returns, exchanges, and warranty claims directly from their user
-                    account. Warranty terms can be added to products and variations, and
-                    customers can track the status of their requests easily.
-                </Typography>
-
-                <List>
-                    <ListItem>
-                        <ListItemText primary="Standard orders take up to 14 business days to arrive." />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemText primary="Expedited orders are shipped via DHL Express." />
-                    </ListItem>
-                    <ListItem>
-                        <ListItemText primary="Expedited shipping takes up to 5 business days to arrive." />
-                    </ListItem>
-                </List>
-            </Box>
-
-            {/* Section 2 */}
-            <Box sx={{ mb: 6 }}>
-                <Typography variant="h5" fontWeight={600} gutterBottom>
-                    2. Easily Set Up Warranties for Products
-                </Typography>
-
-                <Typography variant="body1" paragraph>
-                    When setting up products, warranties can be assigned directly to a
-                    product or specific variations from the product edit screen. Warranty
-                    or return time periods, pricing, and conditions can be defined and
-                    saved easily.
+                    Biozoc endeavours to ensure that pharmaceutical products and related
+                    services offered under its operations are aligned with generally
+                    accepted quality standards and applicable regulatory norms at the
+                    time of manufacture and dispatch.
                 </Typography>
 
                 <Typography variant="body1">
-                    Warranties are tied directly to the product. Once the warranty expires,
-                    the ability to request a warranty claim, return, or exchange also
-                    expires.
+                    Products are manufactured and supplied through approved facilities
+                    operating under documented quality control procedures. Information
+                    provided herein is for general reference only and does not constitute
+                    a statutory or unconditional warranty.
                 </Typography>
             </Box>
 
-            {/* Section 3 */}
-            <Box sx={{ mb: 6 }}>
+            {/* Warranty Coverage */}
+            <Box sx={{ mb: 5 }}>
                 <Typography variant="h5" fontWeight={600} gutterBottom>
-                    3. Powerful Warranties and Returns Manager
+                    Warranty Coverage
                 </Typography>
 
-                <Typography variant="body1" paragraph>
-                    Our Warranties and Returns Manager provides an intuitive dashboard to
-                    handle customer requests efficiently. Requests are managed in a
-                    separate menu with real-time notifications for new submissions.
-                </Typography>
-
-                <Typography variant="body1" paragraph>
-                    Requests can be processed in seconds, with options to mark them as
-                    <strong> Processing</strong>, <strong>Completed</strong>, or
-                    <strong> Rejected</strong>. Support teams can also communicate directly
-                    with customers using built-in email templates.
-                </Typography>
-            </Box>
-
-            {/* Section 4 */}
-            <Box sx={{ mb: 6 }}>
-                <Typography variant="h5" fontWeight={600} gutterBottom>
-                    4. Variable Products Warranties
-                </Typography>
-
-                <Typography variant="body1" paragraph>
-                    Warranty options can be configured individually for variable products.
-                    Shipping timelines remain the same across variations:
-                </Typography>
-
-                <List>
+                <List
+                    sx={{
+                        listStyleType: "disc",
+                        pl: 4,
+                        "& .MuiListItem-root": {
+                            display: "list-item",
+                            paddingLeft: 0,
+                        },
+                    }}
+                >
                     <ListItem>
-                        <ListItemText primary="Standard orders: up to 14 business days." />
+                        <ListItemText primary="Warranty coverage, if any, is limited strictly to manufacturing-related defects identifiable at the time of dispatch." />
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="Expedited orders via DHL Express." />
+                        <ListItemText primary="Products are reviewed for conformity with internally approved specifications prior to dispatch." />
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="Expedited delivery: up to 5 business days." />
+                        <ListItemText primary="Any warranty-related request must be supported with relevant batch details and corresponding invoice reference." />
                     </ListItem>
                 </List>
             </Box>
 
-            {/* FAQ Section */}
-            <Box sx={{ mb: 6 }}>
+            {/* Exclusions */}
+            <Box sx={{ mb: 5 }}>
                 <Typography variant="h5" fontWeight={600} gutterBottom>
-                    Frequently Asked Questions
+                    Exclusions
                 </Typography>
 
-                <Typography variant="subtitle1" fontWeight={600} gutterBottom>
-                    What is the RMA number?
-                </Typography>
                 <Typography variant="body1" paragraph>
-                    The Return Materials Authorization (RMA) number, or order number, is the
-                    reference number for your return. It is included in the email
-                    confirmation sent to you and must be clearly labeled on all return
-                    packages.
+                    Warranty coverage does not extend to circumstances including, but not
+                    limited to:
                 </Typography>
 
-                <Typography variant="subtitle1" fontWeight={600} gutterBottom>
-                    What warranty support am I eligible for?
-                </Typography>
-                <Typography variant="body1" paragraph>
-                    Quality is at the core of our products. We oversee the entire
-                    development and production process to ensure long-lasting performance
-                    and reliable warranty support.
+                <List
+                    sx={{
+                        listStyleType: "disc",
+                        pl: 4,
+                        "& .MuiListItem-root": {
+                            display: "list-item",
+                            paddingLeft: 0,
+                        },
+                    }}
+                >
+                    <ListItem>
+                        <ListItemText primary="Improper or non-compliant storage, handling, or transportation practices" />
+                    </ListItem>
+                    <ListItem>
+                        <ListItemText primary="Products sold, stored, or used beyond their stated expiry date" />
+                    </ListItem>
+                    <ListItem>
+                        <ListItemText primary="Damage or deterioration occurring after delivery acceptance" />
+                    </ListItem>
+                    <ListItem>
+                        <ListItemText primary="Unauthorized modification, repackaging, relabeling, or alteration of products" />
+                    </ListItem>
+                </List>
+            </Box>
+
+            {/* Service Support */}
+            <Box sx={{ mb: 5 }}>
+                <Typography variant="h5" fontWeight={600} gutterBottom>
+                    Service Support
                 </Typography>
 
-                <Typography variant="subtitle1" fontWeight={600} gutterBottom>
-                    How do I use the Online Warranty and Support Tool?
-                </Typography>
                 <Typography variant="body1" paragraph>
-                    Our online warranty and support tool allows you to submit and track
-                    warranty requests directly, ensuring a smooth and transparent process.
+                    Subject to mutual understanding and applicable agreements, Biozoc may
+                    extend certain non-binding support services, which can include:
                 </Typography>
 
-                <Typography variant="subtitle1" fontWeight={600} gutterBottom>
-                    Advanced Warranty Replacement (AWR)
-                </Typography>
-                <Typography variant="body1" paragraph>
-                    Advanced Warranty Replacement ensures minimal downtime by providing
-                    efficient replacement solutions while maintaining high product
-                    quality standards.
+                <List
+                    sx={{
+                        listStyleType: "disc",
+                        pl: 4,
+                        "& .MuiListItem-root": {
+                            display: "list-item",
+                            paddingLeft: 0,
+                        },
+                    }}
+                >
+                    <ListItem>
+                        <ListItemText primary="General business or operational consultation" />
+                    </ListItem>
+                    <ListItem>
+                        <ListItemText primary="Product-related informational guidance" />
+                    </ListItem>
+                    <ListItem>
+                        <ListItemText primary="Assistance with documentation or information sharing, where applicable" />
+                    </ListItem>
+                    <ListItem>
+                        <ListItemText primary="Ongoing communication for coordination purposes" />
+                    </ListItem>
+                </List>
+
+                <Typography variant="body1">
+                    The scope, nature, and availability of services may vary and shall not
+                    be construed as a contractual obligation unless expressly agreed in
+                    writing.
                 </Typography>
             </Box>
 
-            {/* Warranty Types */}
+            {/* Claim Process */}
+            <Box sx={{ mb: 5 }}>
+                <Typography variant="h5" fontWeight={600} gutterBottom>
+                    Claim Process
+                </Typography>
+
+                <Typography variant="body1">
+                    Warranty or service-related concerns, if any, should be communicated
+                    through official channels. Each request is subject to internal review
+                    and assessment. Submission of a request does not imply acceptance of
+                    liability, replacement, or compensation.
+                </Typography>
+            </Box>
+
+            {/* Delivery Disclaimer */}
+            <Box sx={{ mb: 5 }}>
+                <Typography variant="h5" fontWeight={600} gutterBottom>
+                    Delivery Disclaimer
+                </Typography>
+
+                <Typography variant="body1">
+                    Delivery timelines communicated are indicative in nature and may vary
+                    due to logistical constraints or factors beyond reasonable control.
+                    Biozoc shall not be responsible for delays attributable to third-party
+                    logistics providers or external circumstances.
+                </Typography>
+            </Box>
+
+            {/* Policy Updates */}
+            <Box sx={{ mb: 5 }}>
+                <Typography variant="h5" fontWeight={600} gutterBottom>
+                    Policy Updates
+                </Typography>
+
+                <Typography variant="body1">
+                    Biozoc reserves the right to revise or update this Warranty & Services
+                    policy at its discretion. Any such changes shall be effective upon
+                    publication on this Website and shall not create retrospective
+                    obligations.
+                </Typography>
+            </Box>
+
+            {/* Contact */}
             <Box>
                 <Typography variant="h5" fontWeight={600} gutterBottom>
-                    Type of Warranty
+                    Support Contact
                 </Typography>
 
                 <Typography variant="body1">
-                    Warranty types vary by product and are clearly defined at the time of
-                    purchase. Please refer to your product documentation or account
-                    dashboard for specific warranty details.
+                    <strong>Biozoc</strong>
+                    <br />
+                    A brand of Zoic Pharmaceuticals
+                    <br />
+                    Website: https://www.biozoc.com
+                    <br />
+                    Email: info@biozoc.com
+                    <br />
+                    Phone: +91-9876800625
                 </Typography>
             </Box>
         </Container>
