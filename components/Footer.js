@@ -27,12 +27,16 @@ const productLinks1 = [
         href: '/product/category/syrups/36'
     },
     {
-        label: 'Injectables',
-        href: '/product/category/injections/15'
-    },
-    {
         label: 'Ointments',
         href: '/product/category/ointments/39'
+    },
+    {
+        label: 'Soap',
+        href: '/product/category/soap/43'
+    },
+    {
+        label: 'Lotion',
+        href: '/product/category/lotion/44'
     }
 ];
 
@@ -56,6 +60,10 @@ const productLinks2 = [
     {
         label: 'Sachets',
         href: '/product/category/sachets/41'
+    },
+    {
+        label: 'Drug',
+        href: '/product/category/drug/63'
     }
 ];
 
@@ -95,8 +103,8 @@ const Footer = () => {
         >
             <Container>
                 <Grid container spacing={4}>
-                    
-                {/* Stay With Us */}
+
+                    {/* Stay With Us */}
                     <Grid size={{ xs: 12, sm: 6, md: 4 }}>
                         <Typography
                             variant="h6"
@@ -210,7 +218,7 @@ const Footer = () => {
                             </IconButton>
                         </Stack>
                     </Grid>
-                    
+
                     {/* Services */}
                     <Grid size={{ xs: 12, sm: 6, md: 4 }}>
                         <Typography

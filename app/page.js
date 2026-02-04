@@ -1,7 +1,9 @@
 "use client";
 
+import FAQComponent from "@/components/FAQComponent";
 import SimpleSlider from "@/components/SimpleSlider";
 import TestimonialSlider from "@/components/TestimonialSlider";
+import { PAGE_FAQS } from "@/data/faqsData";
 import { Button, Container, Grid, Stack, Toolbar, Typography } from "@mui/material";
 import Link from "next/link";
 
@@ -37,9 +39,9 @@ const productCategories = [
     link: "/product/category/energy-drinks/49"
   },
   {
-    label: "Injectables",
-    img: "/categories/injectables.jpg",
-    link: "/product/category/injectables/61"
+    label: "Drug",
+    img: "/categories/drug.jpg",
+    link: "/product/category/drug/63"
   },
   {
     label: "Lotions",
@@ -255,6 +257,10 @@ export default function Home() {
 
       {/* Testimonial Slider */}
       <TestimonialSlider />
+
+      <Container>
+        <FAQComponent faqs={PAGE_FAQS.home}/>
+      </Container>
     </>
   );
 }

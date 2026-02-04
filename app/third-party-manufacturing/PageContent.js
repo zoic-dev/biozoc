@@ -1,5 +1,7 @@
 "use client";
 
+import FAQComponent from "@/components/FAQComponent";
+import { PAGE_FAQS } from "@/data/faqsData";
 // app/contract-manufacturing/page.js
 import {
     Box,
@@ -15,7 +17,8 @@ import {
     TableHead,
     TableRow,
     Paper,
-    Button
+    Button,
+    Toolbar
 } from "@mui/material";
 
 const productionCapacity = [
@@ -266,6 +269,10 @@ export default function PageContent() {
                 </Button>
 
             </Box>
+
+            <Toolbar />
+
+            <FAQComponent faqs={PAGE_FAQS.third} />
         </Container>
     );
 }

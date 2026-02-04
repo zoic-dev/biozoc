@@ -17,6 +17,8 @@ import {
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { useSearchParams, useRouter } from "next/navigation";
+import FAQComponent from "./FAQComponent";
+import { PAGE_FAQS } from "@/data/faqsData";
 
 export default function ProductsByCategoryPage({ categorySlug, categoryId }) {
     const searchParams = useSearchParams();
@@ -195,6 +197,8 @@ export default function ProductsByCategoryPage({ categorySlug, categoryId }) {
                     </Stack>
                 </>
             )}
+
+            <FAQComponent faqs={PAGE_FAQS[categorySlug] || []} />
         </Container>
     );
 }
