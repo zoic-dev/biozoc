@@ -13,14 +13,22 @@ export async function POST(request) {
             message
         } = body;
 
+        // const transporter = nodemailer.createTransport({
+        //     host: "smtp.hostinger.com",
+        //     port: 465,
+        //     secure: true,
+        //     auth: {
+        //         user: process.env.EMAIL_USER,
+        //         pass: process.env.EMAIL_PASS,
+        //     }
+        // });
+
         const transporter = nodemailer.createTransport({
-            host: "smtp.hostinger.com",
-            port: 465,
-            secure: true,
+            service: "gmail",
             auth: {
                 user: process.env.EMAIL_USER,
                 pass: process.env.EMAIL_PASS,
-            }
+            },
         });
 
         const html = generateEmailTemplate(name, email, phone, city, message);
@@ -28,9 +36,8 @@ export async function POST(request) {
         // User-facing subject (important)
         const mailOptions = {
             from: `"Biozoc INC." <${process.env.EMAIL_USER}>`,
-            to: email,
-            replyTo: process.env.EMAIL_USER,
-            cc: process.env.EMAIL_CC,
+            to: process.env.EMAIL_TO,
+            cc: email,
             subject: "We’ve received your enquiry | Biozoc INC.",
             html: html,
         };

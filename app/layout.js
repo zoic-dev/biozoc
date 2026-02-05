@@ -5,6 +5,7 @@ import "./fonts.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Script from "next/script";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export const metadata = {
   title: "Biozoc Inc. | Leading Pharma & Nutraceutical Manufacturer in India",
@@ -27,9 +28,12 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
         <Footer />
 
+        {/* Whatsapp Button */}
+        <WhatsAppButton />
+
         {/* ✅ Optional: Load Tawk.to script safely */}
 
-        <Script id="tawk-to" strategy="afterInteractive">
+        {/* <Script id="tawk-to" strategy="afterInteractive">
           {`
             var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
             (function(){
@@ -41,7 +45,7 @@ export default function RootLayout({ children }) {
               s0.parentNode.insertBefore(s1,s0);
             })();
           `}
-        </Script>
+        </Script> */}
 
       </body>
     </html>

@@ -1,6 +1,6 @@
 "use client";
 
-import { AccessTime, Email, Phone } from "@mui/icons-material";
+import { AccessTime, Email, LocationPin, Phone } from "@mui/icons-material";
 import { Container, Grid, IconButton, Snackbar, Stack, Toolbar, Typography } from "@mui/material";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
@@ -206,15 +206,13 @@ export default function PageContent() {
                                 "&:hover": { backgroundColor: "#1565c0" },
                             }}
                         >
-                            <Email fontSize="medium" />
+                            <LocationPin fontSize="medium" />
                         </IconButton>
                         <Typography variant="h5" fontWeight={600} gutterBottom>
-                            Email
+                            Corporate Office
                         </Typography>
                         <Stack direction="row" justifyContent="center" spacing={2}>
-                            <Link href="mailto:info@biozoc.com">
-                                <Typography variant="body1">info@biozoc.com</Typography>
-                            </Link>
+                            <Typography variant="body1">Plot No. 193, Sector 82, Industrial Area, Mohali</Typography>
                         </Stack>
                     </Stack>
                 </Grid>
