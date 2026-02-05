@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
       */}
       <body>
         <Navbar />
-        <main>{children}</main> 
+        <main>{children}</main>
         <Footer />
 
         {/* Whatsapp Button */}

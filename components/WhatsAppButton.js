@@ -5,7 +5,7 @@ import React from "react";
 export default function WhatsAppButton() {
     return (
         <a
-            href="https://web.whatsapp.com/send?phone=918146636184&text=Hello%20Biozoc,%20I%20Need%20to%20ask%20a%20query"
+            href="https://web.whatsapp.com/send?phone=918146636184&text=Hello%20Biozoc,%20I%20have%20an%20enquiry."
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Chat with Zocveda on WhatsApp"

@@ -253,7 +253,7 @@ export default function PageContent() {
                     </Typography>
                     <Button
                         variant="contained"
-                        href="mailto:info@biozoc.com"
+                        href="tel:9815620908"
                         sx={{
                             background: "#fff",
                             color: "#EC1C24",
@@ -263,7 +263,7 @@ export default function PageContent() {
                             "&:hover": { background: "#f9f9f9" },
                         }}
                     >
-                        info@biozoc.com
+                        +91 9815620908
                     </Button>
                 </Container>
             </Box>

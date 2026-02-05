@@ -11,7 +11,7 @@ import {
     IconButton,
 } from "@mui/material";
 import Link from "next/link";
-import { Email, Facebook, Instagram, LinkedIn, Phone, X, YouTube } from "@mui/icons-material";
+import { Email, Facebook, Instagram, LinkedIn, LocationPin, Phone, X, YouTube } from "@mui/icons-material";
 
 const productLinks1 = [
     {
@@ -77,6 +77,10 @@ const additionalLinks = [
         href: '/contact'
     },
     {
+        label: 'Blog',
+        href: '/blog'
+    },
+    {
         label: 'FAQs',
         href: '/frequently-asked-questions'
     },
@@ -121,7 +125,7 @@ const Footer = () => {
                         </Typography>
                         <Stack spacing={2} mb={2}>
                             <Stack direction={"row"} spacing={1}>
-                                <Email fontSize="small" />
+                                <LocationPin fontSize="small" />
 
                                 <MUILink
                                     component={Link}
@@ -134,7 +138,7 @@ const Footer = () => {
                                         "&:hover": { color: "#EC1B24" },
                                     }}
                                 >
-                                    info@biozoc.com
+                                    Plot No. 193, Sector 82, Industrial Area, Mohali
                                 </MUILink>
                             </Stack>
 
