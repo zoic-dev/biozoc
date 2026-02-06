@@ -109,7 +109,7 @@ export default function Navbar() {
                 { label: "Herbal Range", href: "/product/category/herbal/48" },
                 { label: "Gynaec Range", href: "/product/category/gynae/52" },
                 { label: "Energy Drinks", href: "/product/category/energy-drinks/49" },
-                { label: "Drug", href: "/product/category/drug/63" },
+                { label: "Allopathy", href: "/product/category/allopathy/63" },
             ],
         },
         { label: "Third Party Manufacturing", href: "/third-party-manufacturing" },
@@ -127,12 +127,12 @@ export default function Navbar() {
                 sx={{
                     background: "#617F00",
                     color: "white",
-                    display: "flex",
+                    display: { xs: "none", sm: "flex" },
                     alignItems: "center",
                 }}
             >
                 <Stack
-                    direction={{ xs: "column", sm: "row" }}
+                    direction={"row"}
                     spacing={{ xs: 1, sm: 3 }}
                     alignItems="center"
                     justifyContent="space-between"
@@ -140,7 +140,7 @@ export default function Navbar() {
                 >
                     {/* Phones + Email grouped */}
                     <Stack
-                        direction={{ xs: "column", sm: "row" }}
+                        direction={"row"}
                         spacing={{ xs: 0.5, sm: 3 }}
                         alignItems="center"
                         flexWrap="wrap"
@@ -168,18 +168,6 @@ export default function Navbar() {
                                 +91 9876800626
                             </Link>
                         </Stack>
-
-                        {/* Email */}
-                        <Stack direction="row" spacing={0.5} alignItems="center">
-                            <Email fontSize="small" sx={{ color: "white" }} />
-                            <Link
-                                href="mailto:info@biozoc.com"
-                                underline="none"
-                                sx={{ color: "white", fontSize: "0.9rem" }}
-                            >
-                                info@biozoc.com
-                            </Link>
-                        </Stack>
                     </Stack>
 
                     {/* Social Icons */}
@@ -201,7 +189,7 @@ export default function Navbar() {
                         </IconButton>
                     </Stack>
                 </Stack>
-            </Box>
+            </Box >
 
 
             <NavbarContainer position="sticky">

@@ -39,9 +39,9 @@ const productCategories = [
     link: "/product/category/energy-drinks/49"
   },
   {
-    label: "Drug",
+    label: "Allopathy",
     img: "/categories/drug.jpg",
-    link: "/product/category/drug/63"
+    link: "/product/category/allopathy/63"
   },
   {
     label: "Lotions",
@@ -106,7 +106,13 @@ export default function Home() {
 
         {/* Our Products Section */}
         <Stack spacing={5} py={5} textAlign={"center"}>
-          <Typography variant="h4">
+          <Typography
+            variant="h4"
+            sx={{
+              fontSize: { xs: "1.25rem", sm: "2.125rem" }, // h6 → h4 sizes
+              fontWeight: 600,
+            }}
+          >
             Your Trusted Range of Healthcare Products
           </Typography>
 
@@ -142,7 +148,12 @@ export default function Home() {
           </Grid>
           <Grid size={{ xs: 12, sm: 12, md: 6 }}>
             <Stack spacing={2}>
-              <Typography variant="h3">
+              <Typography variant="h3"
+                sx={{
+                  fontSize: { xs: "1.5rem", sm: "2.125rem" }, // h6 → h4 sizes
+                  fontWeight: 600,
+                }}
+              >
                 Best Pharma Franchise Company in India
               </Typography>
               <Typography variant="body1" textAlign={"justify"}>
@@ -259,7 +270,7 @@ export default function Home() {
       <TestimonialSlider />
 
       <Container>
-        <FAQComponent faqs={PAGE_FAQS.home}/>
+        <FAQComponent faqs={PAGE_FAQS.home} />
       </Container>
     </>
   );

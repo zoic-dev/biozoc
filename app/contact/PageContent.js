@@ -159,8 +159,8 @@ export default function PageContent() {
                                 height: 60,
                                 borderRadius: "50%",
                                 color: "#fff",
-                                backgroundColor: "#1877F2",
-                                "&:hover": { backgroundColor: "#1565c0" },
+                                backgroundColor: "#EC1C24",
+                                "&:hover": { backgroundColor: "#EC1C24" },
                             }}
                         >
                             <Phone fontSize="medium" />
@@ -202,17 +202,19 @@ export default function PageContent() {
                                 height: 60,
                                 borderRadius: "50%",
                                 color: "#fff",
-                                backgroundColor: "#1877F2",
-                                "&:hover": { backgroundColor: "#1565c0" },
+                                backgroundColor: "#EC1C24",
+                                "&:hover": { backgroundColor: "#EC1C24" },
                             }}
                         >
-                            <LocationPin fontSize="medium" />
+                            <Email fontSize="medium" />
                         </IconButton>
                         <Typography variant="h5" fontWeight={600} gutterBottom>
-                            Corporate Office
+                            Email
                         </Typography>
                         <Stack direction="row" justifyContent="center" spacing={2}>
-                            <Typography variant="body1">Plot No. 193, Sector 82, Industrial Area, Mohali</Typography>
+                            <Link href="mailto:biozocinc@gmail.com">
+                                <Typography variant="body1">biozocinc@gmail.com</Typography>
+                            </Link>
                         </Stack>
                     </Stack>
                 </Grid>
@@ -240,8 +242,8 @@ export default function PageContent() {
                                 height: 60,
                                 borderRadius: "50%",
                                 color: "#fff",
-                                backgroundColor: "#1877F2",
-                                "&:hover": { backgroundColor: "#1565c0" },
+                                backgroundColor: "#EC1C24",
+                                "&:hover": { backgroundColor: "#EC1C24" },
                             }}
                         >
                             <AccessTime fontSize="medium" />
@@ -263,7 +265,7 @@ export default function PageContent() {
             {/* Contact Form */}
 
             <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
-                <Grid container spacing={4} alignItems={"center"}>
+                <Grid container spacing={4} alignItems={"start"}>
                     <Grid size={{ xs: 12, sm: 6 }}>
                         <Stack spacing={2} mb={4}>
                             {!!errors.afterSubmit && (
@@ -328,7 +330,7 @@ export default function PageContent() {
                     </Grid>
 
                     <Grid size={{ xs: 12, sm: 6 }}>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.1586617388853!2d76.6961264!3d30.713939699999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fefa09b2035e5%3A0x4fc75ecf1646f6cd!2sBIOZOC%20INC.%20-Third%20party%20manufacturing%20pharma%20company%20in%20Chandigarh!5e0!3m2!1sen!2sin!4v1762922064011!5m2!1sen!2sin" width="100%" height="400" style={{ border: '0' }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.1586617388853!2d76.6961264!3d30.713939699999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fefa09b2035e5%3A0x4fc75ecf1646f6cd!2sBIOZOC%20INC.%20-Third%20party%20manufacturing%20pharma%20company%20in%20Chandigarh!5e0!3m2!1sen!2sin!4v1762922064011!5m2!1sen!2sin" width="100%" height="500" style={{ border: '0' }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     </Grid>
                 </Grid>
             </FormProvider>

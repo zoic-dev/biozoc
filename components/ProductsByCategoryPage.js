@@ -81,7 +81,7 @@ export default function ProductsByCategoryPage({ categorySlug, categoryId }) {
                 textAlign="center"
                 color="text.primary"
             >
-                {categorySlug.replace(/-/g, " ").replace(/\b\w/g, (char, index) => index === 0 ? char.toUpperCase() : char.toLowerCase())} Products
+                {categorySlug.replace(/-/g, " ").replace(/\b\w/g, (char, index) => index === 0 ? char.toUpperCase() : char.toLowerCase())}
             </Typography>
 
             {products.length === 0 ? (

@@ -62,8 +62,8 @@ const productLinks2 = [
         href: '/product/category/sachets/41'
     },
     {
-        label: 'Drug',
-        href: '/product/category/drug/63'
+        label: 'Allopathy',
+        href: '/product/category/allopathy/63'
     }
 ];
 
@@ -125,11 +125,11 @@ const Footer = () => {
                         </Typography>
                         <Stack spacing={2} mb={2}>
                             <Stack direction={"row"} spacing={1}>
-                                <LocationPin fontSize="small" />
+                                <Email fontSize="small" />
 
                                 <MUILink
                                     component={Link}
-                                    href={"mailto:info@biozoc.com"}
+                                    href={"mailto:biozocinc@gmail.com"}
                                     underline="none"
                                     sx={{
                                         color: "#acacac",
@@ -138,7 +138,7 @@ const Footer = () => {
                                         "&:hover": { color: "#EC1B24" },
                                     }}
                                 >
-                                    Plot No. 193, Sector 82, Industrial Area, Mohali
+                                    biozocinc@gmail.com
                                 </MUILink>
                             </Stack>
 
