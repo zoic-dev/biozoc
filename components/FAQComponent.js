@@ -13,12 +13,17 @@ export default function FAQComponent({ faqs = [], PRIMARY = "#EC1C24" }) {
     return (
         <Box sx={{ my: 6 }}>
             {/* Section Title */}
-            <Typography
-                variant="h5"
-                sx={{ color: PRIMARY, fontWeight: 800, mb: 2 }}
-            >
-                Frequently Asked Questions
-            </Typography>
+            {
+                faqs.length > 0 ?
+                    <Typography
+                        variant="h5"
+                        sx={{ color: PRIMARY, fontWeight: 800, mb: 2 }}
+                    >
+                        Frequently Asked Questions
+                    </Typography>
+                    :
+                    <></>
+            }
 
             {/* FAQ Accordion List */}
             {faqs.map((f, idx) => (
