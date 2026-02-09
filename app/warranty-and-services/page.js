@@ -14,13 +14,16 @@ import {
    SEO – Next.js App Router
 ========================= */
 export const metadata = {
-    title: "Warranty & Services | Biozoc – Zoic Pharmaceuticals",
+    title: "Warranty & Services | PCD Pharma Franchise Support Info",
     description:
-        "Review Biozoc’s Warranty & Services policy outlining quality standards, warranty limitations, service support, and delivery disclaimers.",
-    robots: "index, follow",
-    alternates: {
-        canonical: "https://www.biozoc.com/warranty-and-services",
-    },
+        "Learn about warranty terms and services for PCD pharma franchise partners, including product support, assurance, service policies, and customer carenow.",
+    keywords: [
+        "pcd pharma franchise in india",
+        "pharma franchise opportunities",
+        "pcd pharma franchise company in india",
+        "best pcd pharma franchise company",
+        "pcd pharma business in india"
+    ]
 };
 
 export default function WarrantyAndServicesPage() {

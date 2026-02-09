@@ -4,17 +4,14 @@ import PageContent from "./PageContent";
 
 // ⭐ Basic SEO Setup
 export const metadata = {
-    title: "Products | Biozoc Pharmaceuticals",
+    title: "PCD Pharma Products Range for Franchise",
     description:
-        "Explore a wide range of high-quality Ayurvedic and pharmaceutical products by Biozoc Pharmaceuticals. Safe, effective, and scientifically formulated.",
+        "Explore quality PCD pharma products including tablets, capsules, syrups, ointments and injectables for ethical franchise growth and strong market demand",
     keywords: [
-        "Biozoc",
-        "Biozoc Pharmaceuticals",
-        "Ayurvedic products",
-        "pharma products",
-        "herbal products",
-        "nutraceuticals",
-        "health supplements"
+        "pcd pharma products",
+        "pharma products for franchise",
+        "medicine product range franchise",
+        "pharma medicines for franchise"
     ]
 };
 

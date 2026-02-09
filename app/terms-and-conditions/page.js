@@ -14,13 +14,16 @@ import {
    SEO – Next.js App Router
 ========================= */
 export const metadata = {
-    title: "Terms & Conditions | Biozoc – Zoic Pharmaceuticals",
+    title: "Terms and Conditions | PCD Pharma Franchise Site Use",
     description:
-        "Read the Terms and Conditions governing the use of Biozoc’s website and pharmaceutical service information.",
-    robots: "index, follow",
-    alternates: {
-        canonical: "https://www.biozoc.com/terms-and-conditions",
-    },
+        "Review the terms and conditions for this PCD pharma franchise site, detailing user responsibilities, use, legal agreements, and rights for visitors.",
+    keywords: [
+        "pcd pharma franchise in india",
+        "pharma franchise opportunities",
+        "pcd pharma franchise company in india",
+        "best pcd pharma franchise company",
+        "pcd pharma business in india"
+    ]
 };
 
 export default function TermsAndConditionsPage() {

@@ -1,11 +1,16 @@
 import PageContent from "./PageContent";
 
 export const metadata = {
-    title: "End-to-End Pharma & Nutraceutical Contract Manufacturing in India | Biozoc Inc.",
+    title: "PCD Pharma Third-Party Manufacturing Services in India",
     description:
-        "Biozoc Inc. offers complete third-party pharma & nutraceutical manufacturing in India with WHO-GMP certified facilities, low MOQ, custom packaging, and full R&D support.",
-    keywords:
-        "pharma contract manufacturing India, third party pharma manufacturer, nutraceutical manufacturer, Biozoc Inc, WHO GMP certified pharma, pharma OEM services, private label pharma, custom formulation India",
+        "PCD pharma third party manufacturing services in India for ethical pharma production, product support, quality compliance, custom formulations and growth.",
+    keywords: [
+        "pharma third party manufacturing",
+        "third party pharma services",
+        "pcd pharma contract manufacturing",
+        "third party production pharma",
+        "quality pharma third party services"
+    ]
 };
 
 

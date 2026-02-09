@@ -1,11 +1,16 @@
 import PageContent from "./PageContent";
 
 export const metadata = {
-    title: "Contact Biozoc Inc. | Pharma & Nutraceutical Manufacturing Inquiries",
+    title: "Contact for PCD Pharma Franchise & Business Enquiries",
     description:
-        "Get in touch with Biozoc Inc. for pharma and nutraceutical contract manufacturing inquiries. Reach our WHO-GMP certified team for product pricing, custom formulations, private labeling, and OEM services in India.",
-    keywords:
-        "contact Biozoc Inc, pharma manufacturing inquiry, nutraceutical manufacturer contact, third party pharma contact, OEM pharma support, private label nutraceuticals India, pharma contract manufacturing support, Biozoc customer care",
+        "Contact for PCD pharma franchise enquiries, product details, monopoly rights, order support, documentation help, and business guidance across India.",
+    keywords: [
+        "pcd pharma franchise in india",
+        "pharma franchise opportunities",
+        "pcd pharma franchise company in india",
+        "best pcd pharma franchise company",
+        "pcd pharma business in india"
+    ]
 };
 
 

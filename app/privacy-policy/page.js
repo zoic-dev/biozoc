@@ -14,13 +14,16 @@ import {
    SEO – Next.js App Router
 ========================= */
 export const metadata = {
-    title: "Privacy Policy | Biozoc – Zoic Pharmaceuticals",
+    title: "Privacy Policy | PCD Pharma Franchise Site Guidelines",
     description:
-        "Read Biozoc’s Privacy Policy to understand how personal and business information is collected, used, and protected by Zoic Pharmaceuticals",
-    robots: "index, follow",
-    alternates: {
-        canonical: "https://www.biozoc.com/privacy-policy",
-    },
+        "Read the privacy policy for this PCD pharma franchise site, outlining how personal information is collected, used, stored, and protected for safety & compliance.",
+    keywords: [
+        "pcd pharma franchise in india",
+        "pharma franchise opportunities",
+        "pcd pharma franchise company in india",
+        "best pcd pharma franchise company",
+        "pcd pharma business in india"
+    ]
 };
 
 export default function PrivacyPolicyPage() {

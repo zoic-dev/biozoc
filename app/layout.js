@@ -8,11 +8,16 @@ import Script from "next/script";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 export const metadata = {
-  title: "Biozoc Inc. | Leading Pharma & Nutraceutical Manufacturer in India",
+  title: "PCD Pharma Franchise Company in India with Monopoly Rights",
   description:
-    "Biozoc Inc. is a trusted PCD pharma company and third-party manufacturer offering premium pharmaceutical and nutraceutical products with WHO-GMP certified facilities, custom formulations, private labeling, and nationwide PCD franchise opportunities.",
-  keywords:
-    "Biozoc Inc, pharma manufacturer India, nutraceutical manufacturer India, third party pharma manufacturing, contract manufacturing pharma, PCD pharma company, PCD franchise India, private label nutraceuticals, pharma OEM services, custom formulation pharma, WHO GMP certified manufacturer",
+    "Leading PCD pharma franchise company in India offering quality drug PCD pharma franchise opportunities with strong support and a wide product range.",
+  keywords: [
+    "pcd pharma franchise in india",
+    "pharma franchise opportunities",
+    "pcd pharma franchise company in india",
+    "best pcd pharma franchise company",
+    "pcd pharma business in india"
+  ]
 };
 
 
