@@ -28,6 +28,11 @@ export default function RootLayout({ children }) {
         Keep className stable and predictable
         — no dynamic values that can differ between SSR and client.
       */}
+
+      <head>
+        <meta name="google-site-verification" content="OoIWgqTlJcFnOBh6wMmuAsP6Kf02HA6AGJZ54ng0T14" />
+      </head>
+
       <body>
         <Navbar />
         <main>{children}</main>
