@@ -31,6 +31,20 @@ export default function RootLayout({ children }) {
 
       <head>
         <meta name="google-site-verification" content="OoIWgqTlJcFnOBh6wMmuAsP6Kf02HA6AGJZ54ng0T14" />
+
+        {/* Google Analytics Script */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-LN0RRT4LM0"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-LN0RRT4LM0');
+          `}
+        </Script>
       </head>
 
       <body>
