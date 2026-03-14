@@ -148,7 +148,7 @@ const generateEmailTemplate = (name, email, phone, city, message) => {
                                     <tr>
                                       <td style="padding-right: 0px;padding-left: 0px;" align="center">
     
-                                        <img align="center" border="0" src="https://www.biozoc.com/wp-content/uploads/2018/09/BioZoic.png" alt="" title="" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 116.67px;"
+                                        <img align="center" border="0" src="https://cms.biozoc.com/wp-content/uploads/2026/03/logo.png" alt="" title="" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 116.67px;"
                                           width="116.67" />
     
                                       </td>
