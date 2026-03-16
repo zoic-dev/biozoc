@@ -169,11 +169,8 @@ export default function PageContent() {
                             Phone
                         </Typography>
                         <Stack direction="row" justifyContent="center" spacing={2}>
-                            <Link href="tel:9876800625">
-                                <Typography variant="body1">98768-00625</Typography>
-                            </Link>
-                            <Link href="tel:9815620908">
-                                <Typography variant="body1">98156-20908</Typography>
+                            <Link href="tel:9815846085">
+                                <Typography variant="body1">98158-46085</Typography>
                             </Link>
                         </Stack>
                     </Stack>
@@ -212,8 +209,8 @@ export default function PageContent() {
                             Email
                         </Typography>
                         <Stack direction="row" justifyContent="center" spacing={2}>
-                            <Link href="mailto:biozocinc@gmail.com">
-                                <Typography variant="body1">biozocinc@gmail.com</Typography>
+                            <Link href="mailto:info@zoicpharmaceuticals.com">
+                                <Typography variant="body1">info@zoicpharmaceuticals.com</Typography>
                             </Link>
                         </Stack>
                     </Stack>

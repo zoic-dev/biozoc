@@ -149,16 +149,16 @@ export default function Navbar() {
                         <Stack direction="row" spacing={0.5} alignItems="center">
                             <Phone fontSize="small" sx={{ color: "white" }} />
                             <Link
-                                href="tel:+919876800625"
+                                href="tel:+919815846085"
                                 underline="none"
                                 sx={{ color: "white", fontSize: "0.9rem" }}
                             >
-                                +91 9876800625
+                                +91 98158-46085
                             </Link>
                         </Stack>
 
                         {/* Phone 2 */}
-                        <Stack direction="row" spacing={0.5} alignItems="center">
+                        {/* <Stack direction="row" spacing={0.5} alignItems="center">
                             <Phone fontSize="small" sx={{ color: "white" }} />
                             <Link
                                 href="tel:+919876800626"
@@ -167,7 +167,7 @@ export default function Navbar() {
                             >
                                 +91 9876800626
                             </Link>
-                        </Stack>
+                        </Stack> */}
                     </Stack>
 
                     {/* Social Icons */}

@@ -125,11 +125,28 @@ const Footer = () => {
                         </Typography>
                         <Stack spacing={2} mb={2}>
                             <Stack direction={"row"} spacing={1}>
+                                <Phone fontSize="small" />
+                                <MUILink
+                                    component={Link}
+                                    href={"tel:9815846085"}
+                                    underline="none"
+                                    sx={{
+                                        color: "#acacac",
+                                        fontSize: 16,
+                                        transition: "0.3s",
+                                        "&:hover": { color: "#EC1B24" },
+                                    }}
+                                >
+                                    +91-9815846085
+                                </MUILink>
+                            </Stack>
+
+                            <Stack direction={"row"} spacing={1}>
                                 <Email fontSize="small" />
 
                                 <MUILink
                                     component={Link}
-                                    href={"mailto:biozocinc@gmail.com"}
+                                    href={"mailto:info@zoicpharmaceuticals.com"}
                                     underline="none"
                                     sx={{
                                         color: "#acacac",
@@ -138,41 +155,26 @@ const Footer = () => {
                                         "&:hover": { color: "#EC1B24" },
                                     }}
                                 >
-                                    biozocinc@gmail.com
+                                    info@zoicpharmaceuticals.com
                                 </MUILink>
                             </Stack>
 
                             <Stack direction={"row"} spacing={1}>
-                                <Phone fontSize="small" />
+                                <LocationPin fontSize="small" />
                                 <MUILink
                                     component={Link}
-                                    href={"tel:9815620908"}
+                                    target="_blank"
+                                    href={"https://maps.app.goo.gl/T6tLSKbjSoKYquGw7"}
                                     underline="none"
                                     sx={{
                                         color: "#acacac",
                                         fontSize: 16,
                                         transition: "0.3s",
+                                        lineHeight: '1.25',
                                         "&:hover": { color: "#EC1B24" },
                                     }}
                                 >
-                                    +91-9815620908
-                                </MUILink>
-                            </Stack>
-
-                            <Stack direction={"row"} spacing={1}>
-                                <Phone fontSize="small" />
-                                <MUILink
-                                    component={Link}
-                                    href={"tel:9876800625"}
-                                    underline="none"
-                                    sx={{
-                                        color: "#acacac",
-                                        fontSize: 16,
-                                        transition: "0.3s",
-                                        "&:hover": { color: "#EC1B24" },
-                                    }}
-                                >
-                                    +91-9876800625
+                                    PLOT NO. 193, Sector 82, JLPL Industrial Area, Mohali
                                 </MUILink>
                             </Stack>
                         </Stack>

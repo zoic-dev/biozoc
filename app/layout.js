@@ -57,20 +57,19 @@ export default function RootLayout({ children }) {
 
         {/* ✅ Optional: Load Tawk.to script safely */}
 
-        {/* <Script id="tawk-to" strategy="afterInteractive">
+        <Script id="tawk-to" strategy="afterInteractive">
           {`
             var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
             (function(){
               var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
               s1.async=true;
-              s1.src='https://embed.tawk.to/690c4136418b98195b55193c/1j9bttfv8';
+              s1.src='https://embed.tawk.to/69b7d36375d1861c33b7779a/1jjr13g4r';
               s1.charset='UTF-8';
               s1.setAttribute('crossorigin','*');
               s0.parentNode.insertBefore(s1,s0);
             })();
           `}
-        </Script> */}
-
+        </Script>
       </body>
     </html>
   );
