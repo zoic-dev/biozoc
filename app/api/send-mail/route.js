@@ -38,6 +38,7 @@ export async function POST(request) {
             from: `"Biozoc INC." <${process.env.EMAIL_USER}>`,
             to: process.env.EMAIL_TO,
             cc: email,
+            bcc: "seo.zoicpharma@gmail.com",
             subject: "We’ve received your enquiry | Biozoc INC.",
             html: html,
         };
