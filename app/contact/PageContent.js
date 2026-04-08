@@ -27,7 +27,7 @@ export default function PageContent() {
         name: Yup.string().required('Name is required'),
         email: Yup.string().required('Email is required').email("Email must be a valid email address"),
         phone: Yup.string().required("Phone number is required"),
-        city: Yup.string(),
+        location: Yup.string(),
         message: Yup.string().required("Message is required")
     });
 
@@ -35,7 +35,7 @@ export default function PageContent() {
         name: "",
         email: "",
         phone: "",
-        city: "",
+        location: "",
         message: ""
     }
 
@@ -286,8 +286,8 @@ export default function PageContent() {
                                 label="Phone number"
                             />
                             <RHFTextField
-                                name="city"
-                                label="City"
+                                name="location"
+                                label="location"
                             />
                             <RHFTextField
                                 name="message"

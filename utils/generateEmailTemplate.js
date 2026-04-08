@@ -1,4 +1,4 @@
-const generateEmailTemplate = (name, email, phone, city, message) => {
+const generateEmailTemplate = (name, email, phone, location, message) => {
     return `
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
     <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
@@ -208,7 +208,7 @@ const generateEmailTemplate = (name, email, phone, city, message) => {
                                     <p style="line-height: 140%;">&nbsp;</p>
                                     <p style="line-height: 140%;">Email : ${email}</p>
                                     <p style="line-height: 140%;">Phone : ${phone}</p>
-                                    <p style="line-height: 140%;">City : ${city}</p>
+                                    <p style="line-height: 140%;">Location : ${location}</p>
                                     <p style="line-height: 140%;">Message : ${message}</p>
                                     <p style="line-height: 140%;">&nbsp;</p>
                                     <p style="line-height: 140%;">We have recieved your request. Our team will get back to you at the earliest.</p>
