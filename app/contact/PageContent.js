@@ -52,11 +52,11 @@ export default function PageContent() {
     } = methods;
 
     const onSubmit = async (data) => {
-        if (!captchaToken) {
-            setOpenFailure(true);
-            setFailureMessage("Please verify that you are not a robot and try again.");
-            return;
-        }
+        // if (!captchaToken) {
+        //     setOpenFailure(true);
+        //     setFailureMessage("Please verify that you are not a robot and try again.");
+        //     return;
+        // }
 
         try {
             setLoading(true);
@@ -66,7 +66,10 @@ export default function PageContent() {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(data),
+                body: JSON.stringify({
+                    ...data,
+                    captchaToken,
+                }),
             });
 
             if (response.ok) {
