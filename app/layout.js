@@ -57,7 +57,7 @@ export default function RootLayout({ children }) {
 
         {/* ✅ Optional: Load Tawk.to script safely */}
 
-        <Script id="tawk-to" strategy="afterInteractive">
+        {/* <Script id="tawk-to" strategy="afterInteractive">
           {`
             var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
             (function(){
@@ -69,6 +69,14 @@ export default function RootLayout({ children }) {
               s0.parentNode.insertBefore(s1,s0);
             })();
           `}
+        </Script> */}
+
+        <Script
+          id="messenger-widget-b"
+          src="https://cdn.botpenguin.com/website-bot.js"
+          strategy="afterInteractive"
+        >
+          {`69de23d0c8aa9da24680df19,69d63c998639fcb260aea92b`}
         </Script>
       </body>
     </html>
