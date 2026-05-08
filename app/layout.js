@@ -76,9 +76,10 @@ export default function RootLayout({ children }) {
           src="https://cdn.botpenguin.com/website-bot.js"
           strategy="afterInteractive"
         >
-          {`69de23d0c8aa9da24680df19,69d63c998639fcb260aea92b`}
+          {`62f35816b4a58e10ad368c11,62f357dbb578d136b545b6c8`} {/* 69de23d0c8aa9da24680df19,69d63c998639fcb260aea92b */}
         </Script>
       </body>
     </html>
   );
 }
+
