@@ -112,7 +112,7 @@ export default function Navbar() {
                 { label: "Allopathy", href: "/product/category/allopathy/63" },
             ],
         },
-        { label: "Third Party Manufacturing", href: "/third-party-manufacturing" },
+        // { label: "Third Party Manufacturing", href: "/third-party-manufacturing" },
         { label: "PCD Franchise", href: "/pcd-franchise" },
         { label: "Contact", href: "/contact" },
     ];

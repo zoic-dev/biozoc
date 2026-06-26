@@ -88,10 +88,10 @@ const additionalLinks = [
         label: 'PCD Pharma',
         href: '/pcd-franchise'
     },
-    {
-        label: 'Third Party Manufacturing',
-        href: '/third-party-manufacturing'
-    },
+    // {
+    //     label: 'Third Party Manufacturing',
+    //     href: '/third-party-manufacturing'
+    // },
 ];
 
 const Footer = () => {

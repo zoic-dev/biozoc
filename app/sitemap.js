@@ -111,7 +111,7 @@ export default async function sitemap() {
         "/contact",
         "/products",
         "/pcd-franchise",
-        "/third-party-manufacturing",
+        // "/third-party-manufacturing",
         "/blog",
         "/frequently-asked-questions",
         "/terms-and-conditions",
