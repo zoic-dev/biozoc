@@ -46,13 +46,12 @@ export default function RootLayout({ children }) {
           `}
         </Script>
 
-        {/* <Script
+        <Script
           id="BotPenguin-messenger-widget"
-          src="https://cdn.botpenguin.com/botpenguin.js"
-          strategy="afterInteractive"
+          src="https://cdn.botpenguin.com/botpenguin.js" defer
         >
-          {`69de23d0c8aa9da24680df19,69d63c998639fcb260aea92b`}
-        </Script> */}
+          {`69de1ebccee2f8a252a2ac26,69d63c998639fcb260aea92b`}
+        </Script>
       </head>
 
       <body>
