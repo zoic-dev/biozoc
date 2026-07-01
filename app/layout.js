@@ -50,7 +50,7 @@ export default function RootLayout({ children }) {
           id="BotPenguin-messenger-widget"
           src="https://cdn.botpenguin.com/botpenguin.js" defer
         >
-          {`69de1ebccee2f8a252a2ac26,69d63c998639fcb260aea92b`}
+          {`69de23d0c8aa9da24680df19,69d63c998639fcb260aea92b`}
         </Script>
       </head>
 
