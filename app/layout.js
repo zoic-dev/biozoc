@@ -45,6 +45,14 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-LN0RRT4LM0');
           `}
         </Script>
+
+        {/* <Script
+          id="BotPenguin-messenger-widget"
+          src="https://cdn.botpenguin.com/botpenguin.js"
+          strategy="afterInteractive"
+        >
+          {`69de23d0c8aa9da24680df19,69d63c998639fcb260aea92b`}
+        </Script> */}
       </head>
 
       <body>
@@ -70,14 +78,6 @@ export default function RootLayout({ children }) {
             })();
           `}
         </Script> */}
-
-        <Script
-          id="BotPenguin-messenger-widget"
-          src="https://cdn.botpenguin.com/botpenguin.js"
-          strategy="afterInteractive"
-        >
-          {`69de23d0c8aa9da24680df19,69d63c998639fcb260aea92b`}
-        </Script>
       </body>
     </html>
   );
